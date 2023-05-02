@@ -1,0 +1,19 @@
+* {
+  background-color: aliceblue;
+  color: black;
+}
+.all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.logo {
+  width: 337;
+  height: 200;
+}
+.signup {
+  width: 365;
+  height: 540;
+}
