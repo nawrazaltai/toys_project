@@ -1,4 +1,4 @@
-import excuteQuery from "@/lib/db";
+import executeQuery from "@/lib/db";
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
@@ -6,7 +6,7 @@ export default async function handler(req, res) {
       query: "SELECT * FROM users",
     };
 
-    const result = await excuteQuery(sql);
+    const result = await executeQuery(sql);
     res.status(200).json({ users: result });
   }
 
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       values: [username, firstName, lastName, email, password],
     };
 
-    const result = await excuteQuery(sql);
+    const result = await executeQuery(sql);
     res.status(200).json({ users: result });
   }
 }
