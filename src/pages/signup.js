@@ -33,12 +33,12 @@ export default function Signup() {
   }
 
   return (
-    <div class="all">
-      <logotype class="logo">
+    <div className="all">
+      <div className="logo">
         <img src="FooterLogo.png" />
-      </logotype>
-      <main class="signup">
-        <labe>Create your account</labe>
+      </div>
+      <main className="signup">
+        <label>Create your account</label>
         <br />
         <br />
         <input
