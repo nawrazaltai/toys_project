@@ -9,7 +9,7 @@ const db = mysql({
     // ssl: { rejectUnauthorized: true }, // Kommentera bort vid uppkoppling mot localhost
   },
 });
-export default async function excuteQuery({ query, values }) {
+export default async function executeQuery({ query, values }) {
   try {
     const results = await db.query(query, values);
     await db.end();

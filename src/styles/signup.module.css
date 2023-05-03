@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&display=swap");
+
+.all {
+  background-color: #ede6e9;
+  width: 90rem;
+  height: 64rem;
+  border-radius: 9.5rem;
+  position: absolute;
+}
+.logo {
+  position: absolute;
+  width: 593px;
+  height: 289.07px;
+  left: 170px;
+  top: 261px;
+}
+.username {
+  box-sizing: border-box;
+  position: absolute;
+  left: 61.32%;
+  right: 13.54%;
+  top: 29.3%;
+  bottom: 67.68%;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.firstname {
+  box-sizing: border-box;
+  position: absolute;
+  left: 61.18%;
+  right: 27.51%;
+  top: 34.1%;
+  bottom: 62.9%;
+  background: #ffffff;
+}
+.lastname {
+  box-sizing: border-box;
+  position: absolute;
+  left: 73.02%;
+  right: 13.54%;
+  top: 34.1%;
+  bottom: 62.9%;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.email {
+  box-sizing: border-box;
+  position: absolute;
+  left: 61.29%;
+  right: 13.54%;
+  top: 38.59%;
+  bottom: 58.41%;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.password {
+  box-sizing: border-box;
+  position: absolute;
+  left: 61.29%;
+  right: 13.54%;
+  top: 43.09%;
+  bottom: 53.91%;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.confirmpassword {
+  box-sizing: border-box;
+  position: absolute;
+  left: 61.29%;
+  right: 13.54%;
+  top: 47.59%;
+  bottom: 49.41%;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.terms {
+  position: absolute;
+  left: 63.79%;
+  right: 12.18%;
+  top: 53.91%;
+  bottom: 43.36%;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22.6451px;
+  line-height: 28px;
+  color: #000000;
+}
+.checkbox {
+  box-sizing: border-box;
+
+  position: absolute;
+  left: 61.32%;
+  right: 36.77%;
+  top: 54.06%;
+  bottom: 43.41%;
+  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+.button1 {
+  position: absolute;
+  width: 299.21px;
+  height: 39.4px;
+  left: 909px;
+  top: 600px;
+  background: #aac9ce;
+  border: 1px solid #aac9ce;
+  border-radius: 28.7495px;
+}
+.text1 {
+  position: absolute;
+  left: 63.33%;
+  right: 16.46%;
+  top: 64.45%;
+  bottom: 32.81%;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22.6451px;
+  line-height: 28px;
+
+  color: #000000;
+}
+.texth2 {
+  position: absolute;
+  left: 13.82%;
+  right: 36.79%;
+  top: 50.29%;
+  bottom: 42.87%;
+
+  font-family: "Lilita One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 61.3358px;
+  line-height: 70px;
+
+  color: #5f3f3f;
+}
+.button2 {
+  position: absolute;
+  width: 299.21px;
+  height: 39.4px;
+  left: 909px;
+  top: 708px;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+  border-radius: 28.7495px;
+}
+.buttontext {
+  position: absolute;
+  left: 33.1%;
+  right: 29.18%;
+  top: 15.23%;
+  bottom: 38.82%;
+
+  font-family: "Lilita One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24.0022px;
+  line-height: 27px;
+
+  color: #5f3f3f;
+}
+.text {
+  position: absolute;
+  left: 13.82%;
+  right: 44.24%;
+  top: 58.59%;
+  bottom: 20.31%;
+
+  font-family: "Lilita One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31.3068px;
+  line-height: 36px;
+
+  color: #5f3f3f;
+}

@@ -1,5 +1,6 @@
 // det här är bara koden utan css och länk til db
 import { useState } from "react";
+import styles from "../styles/signup.module.css";
 
 export default function Signup() {
   const [username, setUsername] = useState("");
@@ -16,10 +17,10 @@ export default function Signup() {
       lastName: lastName,
       email: email,
       password: password,
-      confirmPassword: confirmPassword,
+      // confirmPassword: confirmPassword,
     };
     console.log("user: ", user);
-    fetch("", {
+    fetch("http://localhost:3001/api/users", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -28,20 +29,25 @@ export default function Signup() {
       },
       body: JSON.stringify(user),
     })
-      .then((res) => console.log("got response", res))
+      .then((res) => res.json())
       .then((data) => console.log(data));
   }
 
   return (
-    <div className="all">
+    <div className={styles.all}>
       <div className="logo">
-        <img src="FooterLogo.png" />
+        <img src="NavbarLogo.png" />
+        <h2 className={styles.texth2}>Create your account</h2>
+        <p className={styles.text}>
+          At our website, you can create a free account and list your toys for
+          others to browse. You can also search for toys that you may be
+          interested in for your own children. Our platform is easy to use and
+          we encourage you to browse often, as new toys are added daily.
+        </p>
       </div>
-      <main className="signup">
-        <label>Create your account</label>
-        <br />
-        <br />
+      <main className={styles.signup}>
         <input
+          className={styles.username}
           placeholder="Username"
           type="text"
           onChange={(e) => setUsername(e.target.value)}
@@ -49,6 +55,7 @@ export default function Signup() {
         <br />
         <br />
         <input
+          className={styles.firstname}
           placeholder="First name"
           type="text"
           onChange={(e) => setFirstName(e.target.value)}
@@ -56,6 +63,7 @@ export default function Signup() {
         <br />
         <br />
         <input
+          className={styles.lastname}
           placeholder="Last name"
           type="text"
           onChange={(e) => setLastName(e.target.value)}
@@ -63,6 +71,7 @@ export default function Signup() {
         <br />
         <br />
         <input
+          className={styles.email}
           placeholder="Email"
           type="text"
           onChange={(e) => setEmail(e.target.value)}
@@ -70,6 +79,7 @@ export default function Signup() {
         <br />
         <br />
         <input
+          className={styles.password}
           placeholder="Password"
           type="password"
           onChange={(e) => setPassword(e.target.value)}
@@ -77,22 +87,22 @@ export default function Signup() {
         <br />
         <br />
         <input
+          className={styles.confirmpassword}
           placeholder="Confirm password"
           type="password"
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
         <br />
         <br />
-        <label>
-          <input type="checkbox"></input>I agree with privacy and policy
-        </label>
+        <label className={styles.terms}>I agree with privacy and policy</label>
+        <input className={styles.checkbox} type="checkbox"></input>
         <br />
         <br />
-        <button onClick={handleSignUp}> Sign up</button>
+        <button onClick={handleSignUp}>Sign up</button>
         <br />
         <br />
         <br />
-        <label>Already have an account</label>
+        <label className={styles.text1}>Already have an account</label>
         <br />
         <br />
         <button>Sign in</button>
