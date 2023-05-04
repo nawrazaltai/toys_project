@@ -1,6 +1,7 @@
 import { Big_Shoulders_Display } from 'next/font/google';
 import { useState } from 'react'
 import Link from "next/link"
+import styles from '../styles/login.module.css'
 
 const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`
@@ -9,7 +10,9 @@ export default function login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [token, setToken] = useState("")
-  const [error, setError] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
+
+  const [show, setShow] = useState(false)
 
   // function authorizeFunc(){
   //   useEffect(() => {  
@@ -30,7 +33,6 @@ export default function login() {
     }
     const userJSON = JSON.stringify(userClient)
     
-    console.log("USER CLIENT", userClient)
     // login 
     fetch(url, {
       method: "POST",
@@ -45,39 +47,57 @@ export default function login() {
         if(data.token){
           setToken(data.token)
         } else {
-          console.log(data, "DAAAATA")
-          setError(data.message)  
+          setErrorMessage(data.message)  
         }
       })   
   }
 
   return (
-    <div className="wrapper">
-      <div>
-        <Link href="/TESTprofile">Profile</Link>
-      </div>
-
-      <div>
-        message: {error}
-      </div>
-      
-      <h3>token: {token}</h3>
-      <h1>Login</h1> 
-      <form action="">
-        <h3>email: {email}</h3>
-        <input type="text" name="username" onChange={(e) => setEmail(e.target.value)}/>
-      
-        <h3>Password: {password}</h3>
-        <input type="text" name="password" onChange={(e) => setPassword(e.target.value)}/>
-       
-        <div>
-          <button className="marg" onClick={(e) => LoginFunc(e)}>Submit</button> 
-        </div>
-      </form>
-
-      <div>
+    <div className={styles.container}>
+      <div className={styles.textBlack}> 
+        <Link href="/TESTprofile">Profile</Link>   
         <button>AUTH</button>
+        <h3>token: {token}</h3>
       </div>
+      
+      <div className={styles.loginWrapper}>      
+
+        <div className={styles.imageContainer}>
+          <img 
+            classname={styles.image} 
+            src="/navbar_logo.png" width={372} height={183}/>
+        </div>
+       
+
+        <form className={styles.form} action="">
+          <div className={styles.login}>
+            <p className={styles.text}>Login to your account</p> 
+            <input 
+              className={styles.input}
+              type="text" 
+              name="username" 
+              placeholder="Email" 
+              onChange={(e) => setEmail(e.target.value)}/> <br/>
+            <input 
+              className={styles.input}
+              type="password" 
+              placeholder="Password" 
+              onChange={(e) => setPassword(e.target.value)}/> <br/>
+            <button 
+              className={styles.buttonSignIn}
+              onClick={(e) => LoginFunc(e)}>Sign in
+            </button> 
+          </div>
+          <div className={styles.signup}>
+            <p className={styles.text}>Don't have an account?</p> 
+            <Link className={styles.link} href="/register">
+              <button className={styles.buttonSignUp}>Sign up</button> 
+            </Link> 
+          </div>
+        </form>
+      </div>
+
+      
     </div>
   )
 }

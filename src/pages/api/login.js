@@ -1,10 +1,7 @@
 import executeQuery from "../../lib/db"   // "../../lib/db";   // "@/lib/db"
 import jwt from "jsonwebtoken"
 
-
 const SECRET = "abcabc123123" // placera sedan i env-fil
-
-// cors()
 
 export default async function login(req, res) {
 
