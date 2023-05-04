@@ -9,7 +9,6 @@ export default async function login(req, res) {
 
     const userClient = req.body
     const { email, password } = userClient
-    console.log("user-client: ", "email: ", email, "password: ", password)
 
     const sql = {
       query: "SELECT * FROM users WHERE email = ?",
@@ -19,8 +18,6 @@ export default async function login(req, res) {
     // query 
     const result = await executeQuery(sql);
     const userDb = result[0]
-
-    console.log("RESULLLT", result)
 
     // if nothing comes from query
     if(result.length === 0) {
