@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&display=swap");
+
+.close {
+  margin-right: 0;
+  width: 20px;
+  color: #000000;
+  background-color: #ede6e9;
+  border: none;
+  font-size: xx-large;
+}
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ede6e9;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 100px;
+  gap: 5em;
+}
+.logo {
+  display: flex;
+  width: 30em;
+  height: 30em;
+  flex-direction: column;
+  gap: 3em;
+}
+.signup {
+  display: flex;
+  flex-direction: column;
+  height: 30em;
+}
+
+.textH2 {
+  font-family: "Lilita One";
+  font-style: normal;
+  font-weight: 400;
+  color: #5f3f3f;
+}
+.textP {
+  font-family: "Lilita One";
+  font-style: normal;
+  color: #5f3f3f;
+}
+.username {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.fLName {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+
+.email {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.password {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.confirmPassword {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+}
+.boxTerms {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.terms {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22.6451px;
+  line-height: 28px;
+  color: #000000;
+}
+.checkbox {
+  box-sizing: border-box;
+  width: 1.5em;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+.button1 {
+  width: 299.21px;
+  height: 39.4px;
+  margin-left: 1em;
+  background: #aac9ce;
+  border: 1px solid #aac9ce;
+  border-radius: 28.7495px;
+}
+.button1:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+.text1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22.6451px;
+  line-height: 28px;
+  margin-left: 1.5em;
+  color: #000000;
+}
+
+.button2 {
+  width: 299.21px;
+  height: 39.4px;
+  margin-left: 1em;
+  background: #ffffff;
+  border: 1px solid #aac9ce;
+  border-radius: 28.7495px;
+}
+.button2:hover {
+  cursor: pointer;
+  background-color: #aac9ce;
+}
+.buttonText {
+  font-family: "Lilita One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24.0022px;
+  line-height: 27px;
+  color: #5f3f3f;
+}
