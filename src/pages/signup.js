@@ -34,7 +34,16 @@ export default function Signup() {
   }
 
   return (
-    <Popup modal nested trigger={<button>Sign up</button>}>
+    <Popup
+      modal
+      nested
+      trigger={
+        <button className={styles.homeButton}>
+          {" "}
+          <p className={styles.buttonText}>Sign up</p>
+        </button>
+      }
+    >
       {(close) => (
         <div className={styles.all}>
           <div className={styles.logo}>
@@ -48,9 +57,15 @@ export default function Signup() {
             </p>
           </div>
           <main className={styles.signup}>
-            <button className={styles.close} onClick={close}>
+            <button
+              className={styles.closeButton}
+              type="button"
+              onClick={close}
+            >
               X
             </button>
+            <br />
+            <br />
             <br />
             <input
               className={styles.username}
