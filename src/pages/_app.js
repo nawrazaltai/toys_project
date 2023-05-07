@@ -1,22 +1,15 @@
 import "@/styles/globals.css";
 import Link from "next/link";
+import { Lilita_One, Montserrat } from "next/font/google";
 
-import Signup from "./signup";
+const lilitaOne = Lilita_One({ weight: "400", subsets: ["latin"] });
+// import Signup from "./signup";
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <Signup />
-      </div>
+    <div className={lilitaOne.className}>
+      {/* <Signup /> */}
       <Component {...pageProps} />
-    </>
+    </div>
   );
 }
