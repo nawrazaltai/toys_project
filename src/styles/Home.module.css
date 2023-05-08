@@ -1,1 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@100;300;400;500;700&display=swap");
 
+.container {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  font-family: "Lilita One", cursive;
+}
+
+.home_landing_text_div {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 5em;
+  height: fit-content;
+  /* border: 1px solid red; */
+}
+
+.welcomeH1 {
+  color: #5f3f3f;
+  font-size: 4.1rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+}
+
+.welcomeH1Responsive {
+  display: none;
+}
+
+.company_description {
+  color: #5f3f3f;
+  font-weight: 100;
+  font-size: 1.7rem;
+  line-height: 1.5em;
+}
+
+.home_cta_buttons_div {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 1.5em;
+}
+
+.home_email_input,
+.home_password_input {
+  width: 26.25em;
+  margin-bottom: 1em;
+  height: 2.25em;
+  font-family: "Montserrat";
+  padding-left: 0.45em;
+  font-weight: 500;
+  border: 1.5px solid;
+  border-color: #aac9ce;
+  border-radius: 6px;
+}
+
+.cta_title {
+  color: #5f3f3f;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.landingImg {
+  width: 27em;
+  object-fit: cover;
+  height: 40em;
+}
+
+.home_cta_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 18.75em;
+}
+
+.home_cta_sign_in,
+.home_cta_sign_up {
+  width: 100%;
+  height: 1.53em;
+  border: none;
+  border-radius: 50px;
+  background-color: #aac9ce;
+  font-family: "Lilita One";
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  color: #5f3f3f;
+}
+
+.home_cta_sign_in {
+  margin-top: 0.4em;
+}
+
+.home_cta_sign_in:hover {
+  background-color: #f0dbe2;
+}
+
+.home_cta_between_buttons {
+  text-align: center;
+  color: #5f3f3f;
+  margin: 0.2em 0;
+  font-size: 1.8rem;
+  /* font-weight: 100; */
+}
+
+.home_cta_sign_up {
+  background-color: transparent;
+  border: 1px solid #aac9ce;
+  transition: 0.1s ease-out;
+}
+
+.home_cta_sign_up:hover {
+  border-width: 2px;
+}
+
+.vector {
+  margin-top: 4em;
+  height: 3em;
+  background-image: url("/Vector.png");
+  background-repeat: repeat;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 770px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .welcomeH1Responsive {
+    color: #5f3f3f;
+    /* font-size: 2.5rem; */
+    font-size: 10vw;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 0.3em;
+    text-align: center;
+    display: flex;
+  }
+
+  .welcomeH1 {
+    display: none;
+  }
+
+  .responsiveImage_and_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .landingImg {
+    width: 90%;
+    padding: 0em 2em;
+    height: 23.5em;
+  }
+
+  .home_landing_text_div {
+    width: 72%;
+    margin: 0;
+    margin-top: 0.85em;
+    /* border: 1px solid red; */
+  }
+
+  .company_description {
+    color: #5f3f3f;
+    font-weight: 100;
+    /* font-size: 1.25rem; */
+    font-size: 4vw;
+    line-height: 1.5em;
+  }
+
+  .cta_title {
+    color: #5f3f3f;
+    /* font-size: 1.75rem; */
+    font-size: 6.2vw;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+  }
+
+  .home_cta_buttons_div {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  .home_email_input,
+  .home_password_input {
+    width: 23em;
+    min-width: 70vw;
+  }
+
+  .home_cta_between_buttons {
+    display: none;
+  }
+
+  .home_cta_sign_in,
+  .home_cta_sign_up {
+    width: 30vw;
+  }
+
+  .home_cta_div {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    justify-content: space-around;
+  }
+
+  .home_cta_sign_in {
+    margin: 0;
+  }
+}
