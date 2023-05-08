@@ -1,0 +1,92 @@
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #aac9ce;
+  list-style-type: none;
+  height: 15rem;
+  color: #5f3f3f;
+}
+
+.logodown {
+  width: 139px;
+  height: 68px;
+}
+
+.textright {
+}
+
+.textleft {
+  width: 23rem;
+  font-size: 14px;
+color: #5f3f3f;
+}
+
+.rightbox {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.leftbox {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.firstUl {
+  list-style-type: none;
+}
+
+.secoundUl {
+  list-style-type: none;
+}
+
+.iconsRight {
+  margin-left: 5rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+}
+
+.facebookicon {
+  margin-right: 1rem;
+  color: #5f3f3f;
+}
+
+.insta {
+  color: #5f3f3f;
+}
+
+.headerFirstUl {
+  font-size: 16px;
+    color: #5f3f3f;
+}
+
+.headerSecondUl {
+  font-size: 16px;
+  color: #5f3f3f;
+}
+
+
+.link {
+  text-decoration: none;
+  color: #5f3f3f;
+  font-size: 13px;
+}
+
+.decoration {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.wavypic {
+  width: 10em;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #aac9ce;
+}

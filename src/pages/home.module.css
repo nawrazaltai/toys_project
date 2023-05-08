@@ -1,0 +1,16 @@
+.welcometext {
+        color: #5f3f3f;
+        margin-top: 5rem;
+}
+
+.text {
+    color: #5f3f3f;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    
+}
