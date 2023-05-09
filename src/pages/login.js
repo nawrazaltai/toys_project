@@ -1,29 +1,20 @@
 import { Big_Shoulders_Display } from "next/font/google";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Router, useRouter } from "next/router";
 import Link from "next/link";
+import BiErrorCircle from "react-icons/bi";
 import styles from "../styles/login.module.css";
 
 const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`;
 
 export default function login() {
+    const router = useRouter();
+    const href = "/TESTprofile";
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [token, setToken] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
-
-    const [show, setShow] = useState(false);
-
-    // function authorizeFunc(){
-    //   useEffect(() => {
-    //     fetch(url, {
-    //       method: "GET",
-    //       headers: { 'Authorization': `Bearer ${token}` }
-    //     })
-    //       .then(res => res.json())
-    //       .then(data => console.log("data", data))
-    //   }, [])
-    // }
 
     function LoginFunc(e) {
         e.preventDefault();
@@ -45,7 +36,17 @@ export default function login() {
             .then((res) => res.json())
             .then((data) => {
                 if (data.token) {
-                    setToken(data.token);
+                    console.log("dataaaa: ", data);
+                    router.push({
+                        pathname: href,
+                        query: {
+                            // data to send to next page
+                            username: data.username,
+                            token: data.token,
+                            isLoggedIn: true,
+                        },
+                    });
+                    //authorizeFunc or middleware
                 } else {
                     setErrorMessage(data.message);
                 }
@@ -55,10 +56,9 @@ export default function login() {
     return (
         <div className={styles.container}>
             <div className={styles.textBlack}>
-                <Link href="/TESTprofile">Profile</Link>
-                <button>AUTH</button>
-                <h3>token: {token}</h3>
-                <h1>error: {errorMessage}</h1>
+                <p>
+                    {email} {password}
+                </p>
             </div>
 
             <div className={styles.loginWrapper}>
@@ -73,6 +73,15 @@ export default function login() {
 
                 <form className={styles.form} action="">
                     <div className={styles.login}>
+                        {errorMessage != "" && (
+                            <p
+                                className={styles.errorDIV}
+                                onClick={() => setErrorMessage("")}
+                            >
+                                *ICON***
+                                {errorMessage}
+                            </p>
+                        )}
                         <p className={styles.text}>Login to your account</p>
                         <input
                             className={styles.input}
