@@ -1,22 +1,35 @@
-name: Mirror and run GitLab CI
+name: Sync to GitLab
 
-on: [push]
+on:
+  push:
+    branches:
+      - development
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Mirror + trigger CI
-      uses: SvanBoxel/gitlab-mirror-and-ci-action@master
-      with:
-        args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
-      env:
-        FOLLOW_TAGS: "false"
-        FORCE_PUSH: "false"
-        GITLAB_HOSTNAME: "gitlab.com"
-        GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: "glpat-dfnNchLtj3XuvVWeUvDw"
-        GITLAB_PROJECT_ID: "45703278"
-        GITHUB_TOKEN: "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"
+      - name: Checkout code
+        uses: actions/checkout@v2
 
+      - name: Pull changes from GitHub
+        run: |
+          git remote add github https://github.com/your-username/your-repo.git
+          git pull github development
+
+      - name: Push changes to GitLab
+        uses: actions/github-script@v4
+        with:
+          script: |
+            git remote add gitlab https://gitlab.com/hardi.kakalaw/toys_project.git
+            git config --global user.email "hardi.kakalaw@chasacademy.se"
+            git config --global user.name "hardi.kakalaw"
+            git push gitlab development
+          repository: https://gitlab.com/hardi.kakalaw/toys_project.git
+
+      - name: Trigger GitLab pipeline
+        uses: appleboy/gitlab-ci-action@v1
+        with:
+          url: gitlab.com
+          token: "glpat-AyZEPSitid1f7UWyksYS"
+          ref: development
