@@ -16,6 +16,7 @@ jobs:
         FORCE_PUSH: "false"
         GITLAB_HOSTNAME: "gitlab.com"
         GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: ${{ glpat-PyYaJw2vxCGpmE2fduyu }}
+        GITLAB_PASSWORD: "glpat-PyYaJw2vxCGpmE2fduyu"
         GITLAB_PROJECT_ID: "45703278"
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: "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"
+
