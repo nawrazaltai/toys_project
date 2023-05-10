@@ -1,28 +1,21 @@
-name: Sync to GitLab
+name: Mirror and run GitLab CI
 
-on:
-  push:
-    branches:
-      - development
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.after }}
-      - name: Push changes to GitLab
-        run: |
-          git remote add gitlab https://gitlab.com/hardi.kakalaw/toys_project.git
-          git config --global user.email "hardi.kakalaw@chasacademy.se"
-          git config --global user.name "hardi.kakalaw"
-          git push gitlab development
-
-      - name: Trigger GitLab pipeline
-        run: |
-          curl --request POST --header "Content-Type: application/json" --header "PRIVATE-TOKEN: glpat-AyZEPSitid1f7UWyksYS" --data "{\"ref\":\"development\"}" "https://gitlab.com/api/v4/projects/45703278/pipeline"
+    - uses: actions/checkout@v1
+    - name: Mirror + trigger CI
+      uses: SvanBoxel/gitlab-mirror-and-ci-action@master
+      with:
+        args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
+      env:
+        FOLLOW_TAGS: "false"
+        FORCE_PUSH: "false"
+        GITLAB_HOSTNAME: "gitlab.com"
+        GITLAB_USERNAME: "hardi.kakalaw"
+        GITLAB_PASSWORD: "glpat-dfnNchLtj3XuvVWeUvDw"
+        GITLAB_PROJECT_ID: "45703278"
+        GITHUB_TOKEN: "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"
