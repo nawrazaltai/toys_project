@@ -1,22 +1,28 @@
-
 import { useEffect, useState } from "react";
 import { Router, useRouter } from "next/router";
 import Link from "next/link";
 // import BiErrorCircle from "react-icons/bi"; // kanske ska användas
 import styles from "../styles/loginForm.module.css";
+import Signup from "./signup";
 
 const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`;
 
-export default function loginForm() {
+export default function loginForm(props) {
+    const { showFunction } = props;
     const router = useRouter();
     const href = "/recentproducts";
     // const href = "/TESTprofile";
 
-    const [userData, setUserData] = useState({})
+    // const [showSignUp, setShowSignUp] = useState(false);
+    const [userData, setUserData] = useState({});
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
+
+    function closeModal() {
+        setShow(false);
+    }
 
     function LoginFunc(e) {
         e.preventDefault();
@@ -25,7 +31,7 @@ export default function loginForm() {
             password: password,
         };
         const userJSON = JSON.stringify(userClient);
-        console.log("USER JSON --- ", userJSON)
+        console.log("USER JSON --- ", userJSON);
         // login
         fetch(url, {
             method: "POST",
@@ -35,33 +41,35 @@ export default function loginForm() {
             },
             body: userJSON,
         })
-        .then((res) => res.json())
-        .then((data) => {
-            if(data.token){
-                setUserData(data)
-                router.push({
-                    pathname: href,
-                    query: data
-                })   
-            console.log("Daaataa", data)
-            } else {
-                console.log("error-message", data.message)
-                setErrorMessage(data.message)
-            }
-        })    
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.token) {
+                    setUserData(data);
+                    router.push({
+                        pathname: href,
+                        query: data,
+                    });
+                    console.log("Daaataa", data);
+                } else {
+                    console.log("error-message", data.message);
+                    setErrorMessage(data.message);
+                }
+            });
     }
 
     return (
-        <div className={styles.container}>    
-            <form className={styles.form} action="">
+        <div className={styles.container}>
+            <div className={styles.form} action="">
                 <div className={styles.login}>
                     {errorMessage != "" && (
                         <div
                             className={styles.error}
                             onClick={() => setErrorMessage("")}
                         >
-                            <span className={styles.icon}>*icon*</span> 
-                            <p className={styles.errorMessage}>{errorMessage}</p>
+                            <span className={styles.icon}>*icon*</span>
+                            <p className={styles.errorMessage}>
+                                {errorMessage}
+                            </p>
                         </div>
                     )}
                     <p className={styles.text}>Login to your account</p>
@@ -90,12 +98,15 @@ export default function loginForm() {
                         Sign in
                     </button>
                     <p className={styles.textOr}>Or</p>
-                    
-                    <button className={styles.buttonSignUp}> {/* make a state that open modal?*/}
-                        <Link className={styles.link} href="/signup"> Sign up </Link>
-                    </button>        
+
+                    <button
+                        onClick={() => showFunction(true)}
+                        className={styles.buttonSignUp}
+                    >
+                        Sign up
+                    </button>
                 </div>
-            </form>  
+            </div>
         </div>
     );
 }

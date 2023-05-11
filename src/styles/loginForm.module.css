@@ -24,14 +24,14 @@ COLORS
 
 .text {
     font-family: "Lilita One", cursive;
-    color:#5f3f3f;
+    color: #5f3f3f;
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 .textOr {
     text-align: center;
     font-family: "Lilita One", cursive;
-    color:#5f3f3f;
+    color: #5f3f3f;
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
 }
@@ -52,14 +52,14 @@ COLORS
     display: flex;
 }
 
-.form {  
+.form {
     margin-right: 2rem;
     min-width: 18rem;
     max-width: 24rem;
     color: #5f3f3f;
     font-size: 1.75rem;
     font-weight: 400;
-    margin-bottom: 0.5em;   
+    margin-bottom: 0.5em;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ COLORS
     margin-top: 0.5;
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .buttonSignIn {
@@ -132,7 +132,7 @@ COLORS
 }
 
 .input {
-    height: 1.5rem;
+    height: 2rem;
     border-radius: 4px;
     margin-bottom: 0.5rem;
     background-color: white;
@@ -158,7 +158,7 @@ COLORS
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;  
+    padding: 1rem;
 }
 
 .icon {
@@ -166,33 +166,31 @@ COLORS
 }
 
 @media only screen and (min-width: 320px) and (max-width: 770px) {
+    .input {
+        width: 100%;
+    }
 
-  .input{
-    width: 100%;
-  }
+    .form {
+        width: 100%;
+        margin: 0;
+    }
 
-  .form {
-    width: 100%;
-    margin: 0;
-  }
+    .buttons {
+        margin-top: 1rem;
+        flex-direction: row;
+        justify-content: center;
+    }
 
-  .buttons {
-    margin-top: 1rem;
-    flex-direction: row;
-    justify-content: center;
-  }
+    .buttonSignIn {
+        margin-top: 0;
+        margin-right: 2rem;
+        width: 40%;
+    }
+    .buttonSignUp {
+        width: 40%;
+    }
 
-  .buttonSignIn {
-    margin-top: 0;
-    margin-right: 2rem;
-    width: 40%;
-   
-  }
-  .buttonSignUp {
-    width: 40%;
-  }
-
-  .textOr { 
-    display: none;
-  }
+    .textOr {
+        display: none;
+    }
 }
