@@ -18,7 +18,7 @@
 
 .textleft {
   width: 23rem;
-  font-size: 14px;
+  font-size: 16px;
 color: #5f3f3f;
 }
 
@@ -58,12 +58,12 @@ color: #5f3f3f;
 }
 
 .headerFirstUl {
-  font-size: 16px;
+  font-size: 20px;
     color: #5f3f3f;
 }
 
 .headerSecondUl {
-  font-size: 16px;
+  font-size: 20px;
   color: #5f3f3f;
 }
 
@@ -71,7 +71,8 @@ color: #5f3f3f;
 .link {
   text-decoration: none;
   color: #5f3f3f;
-  font-size: 13px;
+  font-size: 16px;
+  
 }
 
 .decoration {
@@ -89,4 +90,41 @@ color: #5f3f3f;
     display: flex;
     justify-content: space-between;
     background-color: #aac9ce;
+}
+
+.li {
+    margin-top: 4px;
+}
+
+@media (max-width: 770px) {
+    .logodown {
+       display: none;
+    }
+
+    .textleft {
+        display: none;
+    }
+
+    .facebookicon {
+        display: none;
+    }
+
+    .insta {
+        display: none;
+    }
+
+    .wavypic {
+        display: none;
+    }
+
+    .rightbox {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  justify-content: flex-end;
+}
+
+.iconsRight {
+display: none;
+}
 }

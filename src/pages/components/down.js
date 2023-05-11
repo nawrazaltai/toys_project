@@ -32,23 +32,23 @@ const Down = () => {
           <div>
             <div className={lilitaOne.className}>
               <h2 className={styles.headerSecondUl}>
-                <b>Company</b>
+                Company
               </h2>
             </div>
             <ul className={styles.firstUl}>
-              <li className={montserrat.className}>
-                <Link className={styles.link} href="/about">
-                  <b>About us</b>
+              <li className={styles.li}>
+                <Link className={`${styles.link} ${montserrat.className}`} href="/about">
+                  About us
                 </Link>
               </li>
-              <li className={montserrat.className}>
-                <Link className={styles.link} href="/about">
-                  <b>Privacy Policy</b>
+              <li className={styles.li}>
+                <Link className={`${styles.link} ${montserrat.className}`} href="/about">
+                  Privacy Policy
                 </Link>
               </li>
-              <li className={montserrat.className}>
-                <Link className={styles.link} href="/about">
-                  <b>Term of Service</b>
+              <li className={styles.li}>
+                <Link className={`${styles.link} ${montserrat.className}`} href="/about">
+                  Terms of Service
                 </Link>
               </li>
             </ul>
@@ -56,18 +56,13 @@ const Down = () => {
           <div>
             <div className={lilitaOne.className}>
               <h2 className={styles.headerFirstUl}>
-                <b>Support</b>
+                Support
               </h2>
             </div>
             <ul className={styles.secoundUl}>
-              <li className={montserrat.className}>
-                <Link className={styles.link} href="/about">
-                  <b>Contact</b>
-                </Link>
-              </li>
-              <li className={montserrat.className}>
-                <Link className={styles.link} href="/about">
-                  <b>FAQ</b>
+              <li className={styles.li}>
+                <Link className={`${styles.link} ${montserrat.className}`} href="/about">
+                  FAQ
                 </Link>
               </li>
             </ul>

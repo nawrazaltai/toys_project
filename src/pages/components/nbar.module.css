@@ -1,4 +1,12 @@
-.bgcolor {
+
+
+
+
+.test {
+background-image: url("/navbardecoration.png");
+  height: 9rem;
+  background-repeat: repeat-x;
+    width: 100%;
 }
 
 .logoupper {
@@ -10,30 +18,16 @@
   display: flex;
   justify-content: space-around;
 padding-top: 1rem;
-  background-color: #f0dae1;
-  width: 100%;
-  height: 9rem;
-  color: #5f3f3f;
-  
-
-
-
-
-
-
-
-
-
-
 }
 
-.waves {
-  --mask:
-    radial-gradient(42.43px at 50% calc(100% - 60.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
-    radial-gradient(42.43px at 50% calc(100% + 30.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
+
+
+.wavy {
+
+width: 100%;
+position: relative;
 }
+
 
 .ulLinks {
   display: flex;
@@ -47,28 +41,161 @@ margin-top: 2rem;
 
 .iconsearch {
   position: absolute;
-  margin-left: 5px;
-  margin-top: 2.1rem;
+  margin-left: 7px;
+  margin-top: 2.2rem;
 }
 
 .searchbar {
-  border-radius: 10px;
-  height: 20px;
-  width: 17rem;
-  padding-left: 25px;
+  border-radius: 25px;
+  height: 28px;
+  width: 19rem;
+  padding-left: 35px;
   margin-top: 2rem;
+  border: 2px solid;
+  border-color:  #5f3f3f;
+  color:#A0A0A0;
+  font-size: 16px;
 }
 
 .link {
   text-decoration: none;
   color: #5f3f3f;
+  font-size: 20px;
 }
 
 .link:hover {
-  color: #aac9ce;
   text-decoration: underline;
 }
 
 .box2 {
   background-color: red;
+}
+
+@media (max-width: 770px) {
+
+  .iconsearch {
+    display: none;
+  }
+
+  .searchbar {
+    display: none;
+  }
+
+  .ulLinks {
+    display: none;
+  }
+
+
+}
+
+@media (min-width: 771px) {
+    .hamburgerContainer {
+    display: none;
+  }
+
+}
+
+
+/* Hamburger */
+
+
+.hamburgerContainer {
+  margin: 0;
+}
+
+
+
+.hamburgermenu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  
+  top: var(--hamburger-margin);
+  left: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburgermenu:has(input:checked) {
+  --foreground: white;
+  --background: #333;
+}
+
+.hamburgermenu:has(input:focus-visible)::before,
+.hamburgermenu:has(input:focus-visible)::after,
+.hamburgermenu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburgermenu::before,
+.hamburgermenu::after,
+.hamburgermenu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburgermenu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburgermenu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburgermenu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburgermenu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: 170%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: #5f3f3f;
+  color: var(--background);
+  max-width: 10rem;
+  min-height: 23.5rem;
+  margin-top: 13.5rem;
+}
+
+.hamburgermenu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+.sidbarstyle {
+ margin-bottom: 1rem;
+   text-decoration: none;
+}
+
+.sidbarstyle:hover {
+   text-decoration: underline;
+     cursor: pointer;
+}
+
+.sidebarUsername {
+   text-decoration: underline;
 }

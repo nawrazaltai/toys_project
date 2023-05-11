@@ -5,12 +5,12 @@ import { Lilita_One } from "next/font/google";
   const lilitaOne = Lilita_One({ weight: "400", subsets: ["latin"] });
 
 
-const FirstCard = () => {
+const FirstCard = ({product}) => {
   return (
-    <div>
-      <img src="./NavbarLogo.png" alt="robot" className={styles.img} />
-      <h3 className={`${styles.cardtext} ${lilitaOne.className}`}>Starwars figure</h3>
-      <div><button  className={`${styles.buttonstyle} ${lilitaOne.className}`}>View</button></div>
+    <div className={styles.imgContainer}>
+      <img src={product.url} alt="robot" className={styles.img} />
+      <div className={`${styles.cardtext} ${lilitaOne.className}`}>{product.product_title}</div>
+      <button  className={`${styles.buttonstyle} ${lilitaOne.className}`}>View</button>
     </div>
   );
 };
