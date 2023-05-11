@@ -6,6 +6,7 @@ import { useState } from "react";
 import landingImg from "../../public/landingimage.jpg";
 import RecentProducts from "./recentproducts";
 import BrowseByCategory from "./browsebycategory";
+import Signup from "./signup";
 
 export default function Home() {
   const [username, setUsername] = useState("");
@@ -13,6 +14,11 @@ export default function Home() {
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [show, setShow] = useState(false);
+
+  function closeModal() {
+    setShow(false);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +46,7 @@ export default function Home() {
 
   return (
     <div>
+      {show && <Signup onClose={closeModal} />}
       <main className={styles.container}>
         <div className={styles.responsiveImage_and_title}>
           <h1 className={styles.welcomeH1Responsive}>Welcome to ReJoi!</h1>
@@ -69,13 +76,21 @@ export default function Home() {
             <div className={styles.home_cta_div}>
               <button className={styles.home_cta_sign_in}>Sign in</button>
               <p className={styles.home_cta_between_buttons}>or</p>
-              <button className={styles.home_cta_sign_up}>Sign up</button>
+              <button
+                onClick={() => {
+                  setShow(true);
+                }}
+                className={styles.home_cta_sign_up}
+              >
+                Sign up
+              </button>
             </div>
           </div>
         </div>
       </main>
       <div className={styles.vector}></div>
       <RecentProducts />
+
       <BrowseByCategory />
     </div>
   );

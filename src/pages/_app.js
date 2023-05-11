@@ -9,10 +9,11 @@ const lilitaOne = Lilita_One({ weight: "400", subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={styles.maincontainer}>
-      <Upper />
+    <div className={lilitaOne.className}>
+       <Upper />
       <Component {...pageProps} />
       <Down />
 </div>
+
   );
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap");
 
 /* font-family: 'Lilita One', cursive;
 font-family: 'Montserrat', sans-serif; 
@@ -9,114 +9,134 @@ font-family: 'Montserrat', sans-serif;
 #ffffff
 */
 
-.textBlack { /* for backend dev */
-  color: black;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+.textBlack {
+    /* for development! */
+    border: 2px solid black;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  margin-bottom: 0.5em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
 }
 
 .container {
-  font-family: "Montserrat", sans-serif;
-  background-color: #ede6e9;
-  color: black;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ede6e9;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.loginWrapper { /* LOGO & FORM container */
-  display: flex;
+.loginWrapper {
+    /* LOGO & FORM container */
+    display: flex;
 }
 
 .form {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-left: 4em;
+    max-width: 15rem;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 4rem;
 }
 
 .imageContainer {
-  margin-top: auto;
-  margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .image {
-  margin-top: auto;
-  margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .login {
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .signup {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .buttonSignIn {
-  width: 100%;
-  background-color: #aac9ce;
-  border: none;
-  border-radius: 2em;
-  padding: 0.2em 2em 0.2em 2em;
-  font-size: 1em;
-  font-family: 'Lilita One', cursive;
-  color: #5f3f3f;
-  margin-top: 0.5em;
+    width: 100%;
+    background-color: #aac9ce;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 4rem 0.4rem 4rem;
+    font-size: 1rem;
+    font-family: "Lilita One", cursive;
+    color: #5f3f3f;
+    margin-top: 0.5rem;
 }
 
-.buttonSignUp { 
-  width: 100%;
-  text-align: center;
-  background-color: #ffffff;
-  border: 2px solid #aac9ce;
-  border-radius: 2em;
-  padding: 0.2em 2em 0.2em 2em;
-  font-family: 'Lilita One', cursive;
-  font-size: 1em;
-  color: #5f3f3f;
-  margin-top: 0.5em;
-}
-
-.input {
-  margin-bottom: 0.5em;
-  background-color: white;
-  border: 1.5px solid #aac9ce;
-  padding-left: 0.2em;
-  color: black;
-}
-
-.input::placeholder {
-  color: gray;
-}
-
-.link {
-  display: flex;
-  justify-content: center;
+.buttonSignUp {
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #aac9ce;
+    border-radius: 2rem;
+    padding: 0.4rem 4rem 0.4rem 4rem;
+    font-family: "Lilita One", cursive;
+    font-size: 1rem;
+    color: #5f3f3f;
+    margin-top: 0.5rem;
 }
 
 .buttonSignIn:hover {
-  background-color: #e5c1cd;
-  cursor: pointer; 
+    outline: 2px solid #aac9ce;
+    background-color: white;
+    cursor: pointer;
 }
 
 .buttonSignUp:hover {
-  background-color: #aac9ce;
-  cursor: pointer; 
+    background-color: #aac9ce;
+    cursor: pointer;
+}
+
+.input {
+    height: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border: 1.5px solid #aac9ce;
+    padding-left: 0.4rem;
+    color: black;
+}
+
+.input::placeholder {
+    color: gray;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+}
+
+.errorDIV {
+    position: relative;
+    top: -5%;
+    border: 4px solid red;
+    border-radius: 2.5rem;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 4rem;
 }
