@@ -3,7 +3,7 @@ import mysql from "serverless-mysql";
 const db = mysql({
   config: {
     host: "localhost", //process.env.DB_HOST,
-    database: "toys_project", // process.env.DB_DATABASE,
+    database: "test", // process.env.DB_DATABASE,
     user: "root", // process.env.DB_USERNAME,
     password: "", // process.env.DB_PASSWORD,
     port: 3306, // default port == 3306
