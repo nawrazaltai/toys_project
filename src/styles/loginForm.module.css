@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap");
+
+/* 
+FONTS 
+font-family: 'Lilita One', cursive;
+font-family: 'Montserrat', sans-serif; 
+
+COLORS
+#ede6e9 bg
+#aac9ce sign in blue
+#5f3f3f brown
+#ffffff
+*/
+
+.blackBox {
+    /* box in corner for development! */
+    border: 2px solid black;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.text {
+    font-family: "Lilita One", cursive;
+    color:#5f3f3f;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.textOr {
+    text-align: center;
+    font-family: "Lilita One", cursive;
+    color:#5f3f3f;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    margin-top: 2rem;
+    text-decoration: none;
+    font-family: "Lilita One", cursive;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loginWrapper {
+    /* LOGO & FORM container */
+    display: flex;
+}
+
+.form {  
+    margin-right: 2rem;
+    min-width: 18rem;
+    max-width: 24rem;
+    color: #5f3f3f;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 0.5em;   
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    text-align: left;
+    margin-top: 0.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.buttonSignIn {
+    border: none;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 1.53em;
+    border-radius: 50px;
+    background-color: #aac9ce;
+    font-family: "Lilita One";
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    color: #5f3f3f;
+}
+
+.buttonSignUp {
+    width: 100%;
+    height: 1.53em;
+    border: 1px solid #aac9ce;
+    border-radius: 50px;
+    background-color: #ffffff;
+    font-family: "Lilita One";
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    color: #5f3f3f;
+}
+
+.link {
+    color: #5f3f3f;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSignUp:hover {
+    outline: 1.5px solid #aac9ce;
+    background-color: white;
+    cursor: pointer;
+}
+
+.buttonSignIn:hover {
+    background-color: #f0dbe2;
+    cursor: pointer;
+}
+
+.input {
+    height: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border: 1.5px solid #aac9ce;
+    padding-left: 0.4rem;
+    color: black;
+}
+
+.input::placeholder {
+    color: gray;
+    font-family: "Montserrat", sans-serif;
+}
+
+.error {
+    font-size: 1.2rem;
+    position: relative;
+    height: 5rem;
+    min-width: 10rem;
+    top: -5%;
+    border: 4px solid rgb(206, 10, 10);
+    border-radius: 2.5rem;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;  
+}
+
+.icon {
+    margin-right: 1rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 770px) {
+
+  .input{
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+    margin: 0;
+  }
+
+  .buttons {
+    margin-top: 1rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .buttonSignIn {
+    margin-top: 0;
+    margin-right: 2rem;
+    width: 40%;
+   
+  }
+  .buttonSignUp {
+    width: 40%;
+  }
+
+  .textOr { 
+    display: none;
+  }
+}

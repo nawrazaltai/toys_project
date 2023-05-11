@@ -8,6 +8,13 @@
   margin-bottom: 2em;
 }
 
+.recent_products_greeting {
+  font-family: "Lilita One", cursive;
+  font-size: 24px;
+  color: #5f3f3f;
+  margin-bottom: 2rem;
+}
+
 .recent_products_h2 {
   color: #5f3f3f;
   font-size: 2.75rem;

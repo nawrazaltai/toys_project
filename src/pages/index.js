@@ -6,6 +6,7 @@ import { useState } from "react";
 import landingImg from "../../public/landingimage.jpg";
 import RecentProducts from "./recentproducts";
 import BrowseByCategory from "./browsebycategory";
+import LoginForm from "./loginForm";
 
 export default function Home() {
   const [username, setUsername] = useState("");
@@ -40,7 +41,9 @@ export default function Home() {
 
   return (
     <div>
+      
       <main className={styles.container}>
+        
         <div className={styles.responsiveImage_and_title}>
           <h1 className={styles.welcomeH1Responsive}>Welcome to ReJoi!</h1>
           <Image className={styles.landingImg} src={landingImg} />
@@ -52,26 +55,7 @@ export default function Home() {
             that every toy deserves a second chance at being played with and
             enjoyed by a child.
           </p>
-          <div className={styles.home_cta_buttons_div}>
-            <p className={styles.cta_title}>Login to your Account.</p>
-
-            <input
-              className={styles.home_email_input}
-              placeholder="Email"
-              type="text"
-            />
-
-            <input
-              className={styles.home_password_input}
-              placeholder="Password"
-              type="password"
-            />
-            <div className={styles.home_cta_div}>
-              <button className={styles.home_cta_sign_in}>Sign in</button>
-              <p className={styles.home_cta_between_buttons}>or</p>
-              <button className={styles.home_cta_sign_up}>Sign up</button>
-            </div>
-          </div>
+          <LoginForm />
         </div>
       </main>
       <div className={styles.vector}></div>

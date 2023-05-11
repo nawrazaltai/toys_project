@@ -4,8 +4,12 @@ import { Inter, Lilita_One, Montserrat } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 // import ProductCard from "./productcard";
+import { useRouter } from "next/router";
 
 export default function RecentProducts() {
+  const router = useRouter();
+  const query = router.query; /* states, user-data from loginForm */
+
   const [products, setProducts] = useState([]);
 
   async function FetchProducts() {
@@ -22,6 +26,7 @@ export default function RecentProducts() {
     setProducts(jsonData.products);
   }
 
+  console.log(products, "PRODUCTS")
   const topThree = products.slice(0, 3);
   const topFour = products.slice(0, 4);
 
@@ -31,6 +36,10 @@ export default function RecentProducts() {
 
   return (
     <div className={styles.recent_products_container}>
+
+      <div className={styles.recent_products_greeting}>
+        <p>Welcome {query.username} to Rejoy!</p>
+      </div>
       <div className={styles.recent_products_title_div}>
         <h2 className={styles.recent_products_h2}>
           Most recently published donations
@@ -45,7 +54,7 @@ export default function RecentProducts() {
       <div className={styles.recent_three_products_div}>
         {topThree.map((product) => {
           return (
-            <div className={styles.home_product_outer_border}>
+            <div key={product.product_id} className={styles.home_product_outer_border}>
               <article className={styles.home_product_article}>
                 <Image
                   width={2000}
