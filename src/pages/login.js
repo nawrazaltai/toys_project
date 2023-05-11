@@ -2,16 +2,18 @@ import { Big_Shoulders_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 import { Router, useRouter } from "next/router";
 import Link from "next/link";
-import BiErrorCircle from "react-icons/bi";
+// import BiErrorCircle from "react-icons/bi"; // kanske ska användas
 import styles from "../styles/login.module.css";
 
 const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`;
 
-export default function login() {
+export default function loginForm() {
     const router = useRouter();
-    const href = "/TESTprofile";
+    const href = "/recentproducts";
+    // const href = "/TESTprofile";
 
+    const [userData, setUserData] = useState({})
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
@@ -23,7 +25,7 @@ export default function login() {
             password: password,
         };
         const userJSON = JSON.stringify(userClient);
-
+        console.log("USER JSON --- ", userJSON)
         // login
         fetch(url, {
             method: "POST",
@@ -33,25 +35,39 @@ export default function login() {
             },
             body: userJSON,
         })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.token) {
-                    console.log("dataaaa: ", data);
-                    router.push({
-                        pathname: href,
-                        query: {
-                            // data to send to next page
-                            username: data.username,
-                            token: data.token,
-                            isLoggedIn: true,
-                        },
-                    });
-                    //authorizeFunc or middleware
-                } else {
-                    setErrorMessage(data.message);
-                }
-            });
+        .then((res) => res.json())
+        .then((data) => {
+            if(data.token){
+                setUserData(data)
+                router.push({
+                    pathname: href,
+                    query: data
+                })   
+            console.log("Daaataa", data)
+            } else {
+                console.log("error-message", data.message)
+                setErrorMessage(data.message)
+            }
+        })    
     }
+            // .then((data) => {
+            //     if (data) {
+            //         console.log("dataaaa: ", data);
+            //         router.push({
+            //             pathname: href,
+            //             query: {
+            //                 // data to send to next page
+            //                 username: data.username,
+            //                 token: data.token,
+            //                 isLoggedIn: true,
+            //             },
+            //         });
+            //         //authorizeFunc or middleware
+            //     } else {
+            //         setErrorMessage(data.message);
+            //     }
+            // });
+    
 
     return (
         <div className={styles.container}>

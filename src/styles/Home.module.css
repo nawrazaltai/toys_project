@@ -68,7 +68,7 @@
   height: 40em;
 }
 
-.home_cta_div {
+.home_cta_div { /*buttons div */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,6 +196,7 @@
   }
 
   .home_cta_between_buttons {
+    border: 2px solid black;
     display: none;
   }
 
