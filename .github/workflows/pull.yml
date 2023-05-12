@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Install ssh client
+      run: sudo apt-get install openssh-client
     - uses: actions/checkout@v1
     - name: Mirror to GitLab and run GitLab CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@0.2
