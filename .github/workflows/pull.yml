@@ -6,13 +6,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
     - name: Install ssh client
       run: sudo apt-get install openssh-client
-    - uses: actions/checkout@v1
     - name: Mirror to GitLab and run GitLab CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@0.2
       with:
-        args: "git@gitlab.com:hardi.kakalaw/toys_project.git"
+        args: "ssh://git@gitlab.com:22/hardi.kakalaw/toys_project.git"
       env:
         FOLLOW_TAGS: "false"
         FORCE_PUSH: "false"
