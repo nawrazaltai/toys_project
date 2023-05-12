@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Pull latest changes
-      run: git pull origin development
+    - name: Fetch latest changes
+      run: git fetch origin development
+    - name: Merge latest changes
+      run: git merge origin/development
     - name: Mirror + trigger CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
@@ -21,3 +23,9 @@ jobs:
         GITLAB_PASSWORD: "glpat-K7xxCt8voazw15h3NKzU"
         GITLAB_PROJECT_ID: "45703278"
         GITHUB_TOKEN: "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"
+    - name: Trigger GitLab pipeline
+      run: |
+        curl --request POST \
+          --form "token=glpat-K7xxCt8voazw15h3NKzU" \
+          --form ref=development \
+          https://gitlab.com/api/v4/projects/45703278/trigger/pipeline
