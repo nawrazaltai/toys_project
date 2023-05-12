@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/signup.module.css";
 
+const PORT = 3000;
+
 export default function Signup(props) {
   const { onClose } = props;
   const [username, setUsername] = useState("");
@@ -34,7 +36,7 @@ export default function Signup(props) {
       password: password,
     };
     console.log("user: ", user);
-    fetch("http://localhost:3000/api/users", {
+    fetch(`http://localhost:${PORT}/api/users`, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -74,7 +76,6 @@ export default function Signup(props) {
         }
       });
   }
-  useEffect(handleUserNameAvailability, [username]);
 
   return (
     <>

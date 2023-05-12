@@ -2,13 +2,13 @@ import { Big_Shoulders_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 import { Router, useRouter } from "next/router";
 import Link from "next/link";
-import BiErrorCircle from "react-icons/bi";
+// import BiErrorCircle from "react-icons/bi"; // kanske ska användas
 import styles from "../styles/login.module.css";
 
 const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`;
 
-export default function Login() {
+export default function login() {
   const router = useRouter();
   const href = "/TESTprofile";
 
