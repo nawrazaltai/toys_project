@@ -76,7 +76,9 @@ export default function Signup(props) {
         }
       });
   }
-  useEffect(handleUserNameAvailability(), [username]);
+  useEffect(() => {
+    handleUserNameAvailability();
+  }, [username]);
   return (
     <>
       <div className={styles.overlay}></div>
