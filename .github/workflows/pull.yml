@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install ssh client
-      run: sudo apt-get install openssh-client
     - name: Mirror to GitLab and run GitLab CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@0.2
       with:
@@ -18,8 +16,6 @@ jobs:
         FORCE_PUSH: "false"
         GITLAB_HOSTNAME: "gitlab.com"
         GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: "ALMD8vEkzpg5szy7SB3y"
-        GITLAB_PROJECT_ID: "45703278"
+        GITLAB_PASSWORD: "glpat-ao5juYZHpog86vd26kWJ"
+        GITLAB_PROJECT_ID: "45703278" 
         GITHUB_TOKEN: "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"
-
-        
