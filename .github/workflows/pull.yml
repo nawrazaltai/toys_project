@@ -10,7 +10,7 @@ jobs:
     - name: Mirror + trigger CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
-        args: "git@gitlab.com:hardi.kakalaw/toys_project.git"
+        args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
       env:
         FOLLOW_TAGS: "false"
         FORCE_PUSH: "false"
