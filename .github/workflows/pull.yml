@@ -7,10 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Fetch latest changes
-      run: git fetch origin development
-    - name: Merge latest changes
-      run: git merge origin/development
     - name: Mirror + trigger CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
@@ -20,12 +16,10 @@ jobs:
         FORCE_PUSH: "false"
         GITLAB_HOSTNAME: "gitlab.com"
         GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: "glpat-K7xxCt8voazw15h3NKzU"
+        GITLAB_PASSWORD: "glpat-5fgzz2LU15yPTswTU1G8"
         GITLAB_PROJECT_ID: "45703278"
-        GITHUB_TOKEN: "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"
-    - name: Trigger GitLab pipeline
+        GITHUB_TOKEN: "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"
+    - name: Push to development branch
       run: |
-        curl --request POST \
-          --form "token=glpat-K7xxCt8voazw15h3NKzU" \
-          --form ref=development \
-          https://gitlab.com/api/v4/projects/45703278/trigger/pipeline
+        git remote set-url --push origin "git@gitlab.com:hardi.kakalaw/toys_project.git"
+        git push origin HEAD:development
