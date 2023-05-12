@@ -40,6 +40,7 @@
     background-color: #ffffff;
     width: 90vw;
     height: 90vh;
+    min-height: 40rem;
     border-radius: 100px;
     gap: 5em;
     opacity: 95%;
@@ -232,6 +233,7 @@
     margin-top: 34em;
     width: 75vw;
     height: 100vh;
+    min-height: 40rem;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 7em;
@@ -411,6 +413,7 @@
     margin-top: 34em;
     width: 80vw;
     height: 100vh;
+    min-height: 40rem;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 7em;

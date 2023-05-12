@@ -74,6 +74,7 @@ export default function Signup(props) {
         }
       });
   }
+  useEffect(handleUserNameAvailability, [username]);
 
   return (
     <>
@@ -108,7 +109,6 @@ export default function Signup(props) {
                 type="text"
                 onChange={(e) => {
                   setUsername(e.target.value);
-                  handleUserNameAvailability();
                 }}
               />
               <p className={styles.errorMessage}>{userNameAvailability}</p>
@@ -209,7 +209,9 @@ export default function Signup(props) {
               <label className={styles.text1}>Already have an account</label>
               <br />
               <button className={styles.button2}>
-                <p className={styles.buttonText}>Sign in</p>
+                <p className={styles.buttonText} onClick={onClose}>
+                  Sign in
+                </p>
               </button>
             </form>
           </div>
