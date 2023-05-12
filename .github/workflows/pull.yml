@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Pull latest changes
+      run: git pull origin development
     - name: Mirror + trigger CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
