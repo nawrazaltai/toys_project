@@ -12,7 +12,7 @@ jobs:
     - name: Mirror to GitLab and run GitLab CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@0.2
       with:
-        args: "git@gitlab.com:hardi.kakalaw/toys_project.git"
+        args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
       env:
         FOLLOW_TAGS: "false"
         FORCE_PUSH: "false"
