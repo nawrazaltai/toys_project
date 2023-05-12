@@ -76,7 +76,7 @@ export default function Signup(props) {
         }
       });
   }
-
+  useEffect(handleUserNameAvailability(), [username]);
   return (
     <>
       <div className={styles.overlay}></div>
@@ -110,6 +110,7 @@ export default function Signup(props) {
                 type="text"
                 onChange={(e) => {
                   setUsername(e.target.value);
+                  handleUserNameAvailability();
                 }}
               />
               <p className={styles.errorMessage}>{userNameAvailability}</p>
