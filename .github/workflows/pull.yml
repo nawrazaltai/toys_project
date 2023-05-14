@@ -1,4 +1,4 @@
-name: Push to GitLab
+name: Gitlab Sync
 
 on:
   push:
@@ -6,25 +6,15 @@ on:
       - development
 
 jobs:
-  build-and-push:
+  sync:
+    name: Gitlab Sync
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Push changes to GitLab
-        uses: git-actions/git-push@v1
+      - uses: actions/checkout@v2
         with:
-          branch: development
-          remote_repository: 'git@gitlab.com:hardi.kakalaw/toys_project.git'
-          force: true
-          ssh_private_key: ${{ env.GITLAB_SSH_PRIVATE_KEY }}
-
-      - name: Trigger pipeline in GitLab
-        uses: crazy-max/ghaction-gitlab-ci@v2
+          fetch-depth: 0
+      - uses: action-pack/gitlab-sync@v3
         with:
-          url: 'https://gitlab.com'
-          api_token: "glpat-iRaN7gRzRud1NcXWXnC7"
-          project_id: '45703278'
-
+          url: git@gitlab.com:hardi.kakalaw/toys_project.git
+          username: ${{ github.actor }}
+          token: ${{ secrets.GITLAB_TOKEN }}
