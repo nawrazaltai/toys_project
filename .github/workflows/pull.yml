@@ -15,6 +15,6 @@ jobs:
           fetch-depth: 0
       - uses: action-pack/gitlab-sync@v3
         with:
-          url: git@gitlab.com:hardi.kakalaw/toys_project.git
+          url: https://gitlab.com/hardi.kakalaw/toys_project.git
           username: ${{ github.actor }}
           token: ${{ secrets.GITLAB_TOKEN }}
