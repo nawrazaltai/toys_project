@@ -1,21 +1,30 @@
-name: Mirror and run GitLab CI
+name: Push to GitLab
 
-on: [push]
+on:
+  push:
+    branches:
+      - development
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Mirror to GitLab and run GitLab CI
-      uses: SvanBoxel/gitlab-mirror-and-ci-action@0.2
-      with:
-        args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
-      env:
-        FOLLOW_TAGS: "false"
-        FORCE_PUSH: "false"
-        GITLAB_HOSTNAME: "gitlab.com"
-        GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: "glpat-ao5juYZHpog86vd26kWJ"
-        GITLAB_PROJECT_ID: "45703278" 
-        GITHUB_TOKEN: "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"
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Push changes to GitLab
+        uses: git-actions/git-push@v1
+        with:
+          branch: development
+          remote_repository: 'git@gitlab.com:hardi.kakalaw/toys_project.git'
+          force: true
+          ssh_private_key: ${{ env.GITLAB_SSH_PRIVATE_KEY }}
+
+      - name: Trigger pipeline in GitLab
+        uses: crazy-max/ghaction-gitlab-ci@v2
+        with:
+          url: 'https://gitlab.com'
+          api_token: "glpat-iRaN7gRzRud1NcXWXnC7"
+          project_id: '45703278'
+
