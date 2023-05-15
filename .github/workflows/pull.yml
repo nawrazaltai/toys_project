@@ -16,4 +16,7 @@ jobs:
         run: git push --force --quiet "https://gitlab.com/hardi.kakalaw/toys_project.git" HEAD:development
 
       - name: Trigger GitLab pipeline
-        run: curl --request POST --header "PRIVATE-TOKEN: ${{ secrets.GITLAB_TOKEN }}" "https://gitlab.com/api/v4/projects/45703278/pipeline"
+        run: |
+          curl --request POST \
+            --header "PRIVATE-TOKEN: glpat-vuoa3nM5MXRtdm9mWTbi" \
+            "https://gitlab.com/api/v4/projects/45703278/pipeline"
