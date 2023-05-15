@@ -7,15 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Mirror to GitLab and run GitLab CI
-      uses: SvanBoxel/gitlab-mirror-and-ci-action@0.2
+    - name: Mirror + trigger CI
+      uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
-        args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
+        args: "https://gitlab.com/hardi.kakalaw/toys-projec.git"
       env:
         FOLLOW_TAGS: "false"
         FORCE_PUSH: "false"
         GITLAB_HOSTNAME: "gitlab.com"
         GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: "glpat-ao5juYZHpog86vd26kWJ"
-        GITLAB_PROJECT_ID: "45703278" 
-        GITHUB_TOKEN: "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"
+        GITLAB_PASSWORD: "glpat-vuoa3nM5MXRtdm9mWTbi"
+        GITLAB_PROJECT_ID: "46033255" 
+        GITHUB_TOKEN: "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"
