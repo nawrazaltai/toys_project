@@ -19,7 +19,7 @@ jobs:
 
       - name: Push to GitLab
         run: |
-          git remote add gitlab "https://gitlab.com/hardi.kakalaw/toys_project.git"
+          git remote add gitlab "git@gitlab.com:hardi.kakalaw/toys_project.git"
           git push --force --quiet gitlab HEAD:development
 
       - name: Trigger GitLab pipeline
