@@ -12,8 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set Git user
+        run: |
+          git config --global user.email "hardi.kakalaw@chasacademy.se"
+          git config --global user.name "hardi.kakalaw"
+
       - name: Push to GitLab
-        run: git push --force --quiet "https://gitlab.com/hardi.kakalaw/toys_project.git" HEAD:development
+        run: |
+          git push --force --quiet "https://hardi.kakalaw@gitlab.com/hardi.kakalaw/toys_project.git" HEAD:development
 
       - name: Trigger GitLab pipeline
         run: |
