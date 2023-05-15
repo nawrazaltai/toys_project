@@ -13,7 +13,7 @@ jobs:
         args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
       env:
         FOLLOW_TAGS: "false"
-        FORCE_PUSH: "true"
+        FORCE_PUSH: "false"
         GITLAB_HOSTNAME: "gitlab.com"
         GITLAB_USERNAME: "svboxel"
         GITLAB_PASSWORD: "glpat-vuoa3nM5MXRtdm9mWTbi"
