@@ -4,7 +4,7 @@ import styles from "../styles/signup.module.css";
 const PORT = 3000;
 
 export default function Signup(props) {
-    const { onClose } = props;
+    const { onClose, switchToLogin } = props;
     const [username, setUsername] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -27,7 +27,7 @@ export default function Signup(props) {
             setErrorMessage("");
         }
     }, [confirmPassword]);
-
+  
     function handleSignUp(e) {
         e.preventDefault();
         const user = {
@@ -246,7 +246,7 @@ export default function Signup(props) {
                                 Already have an account
                             </label>
                             <br />
-                            <button className={styles.button2}>
+                            <button onClick={() => switchToLogin()} className={styles.button2}>
                                 <p className={styles.buttonText}>Sign in</p>
                             </button>
                         </form>

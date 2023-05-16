@@ -8,17 +8,25 @@ import RecentProducts from "./recentproducts";
 import BrowseByCategory from "./browsebycategory";
 import Signup from "./signup";
 import LoginForm from "./loginForm";
+import LoginPopup from "./loginpopup"
 
 export default function Home() {
-    const [username, setUsername] = useState("");
-    const [firstname, setFirstname] = useState("");
-    const [lastname, setLastname] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [show, setShow] = useState(false);
+    const [showSignup, setShowSignup] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
 
-    function closeModal() {
-        setShow(false);
+    function closeSignup() {
+        setShowSignup(false);
+    }
+    function closeLogin() {
+        setShowLogin(false);
+    }
+    function switchToLogin(){
+        setShowSignup(false);
+        setShowLogin(true)
+    }
+    function switchToSignup(){
+        setShowLogin(false);
+        setShowSignup(true)
     }
 
     const handleSubmit = (e) => {
@@ -47,7 +55,9 @@ export default function Home() {
 
     return (
         <div>
-            {show && <Signup onClose={() => closeModal()} />}
+            {showSignup && <Signup onClose={closeSignup} switchToLogin={switchToLogin} />} 
+            {showLogin && <LoginPopup onClose={closeLogin} switchToSignup={switchToSignup}  /> }
+           
             <main className={styles.container}>
                 <div className={styles.responsiveImage_and_title}>
                     <h1 className={styles.welcomeH1Responsive}>
@@ -63,7 +73,8 @@ export default function Home() {
                         being played with and enjoyed by a child.
                     </p>
 
-                    <LoginForm showFunction={setShow} />
+                    <LoginForm showSignupFunc={setShowSignup} />
+                    
                 </div>
             </main>
             <div className={styles.vector}></div>
