@@ -9,6 +9,7 @@
     margin-bottom: 3rem;
     margin-top: 1rem;
     font-size: 62px;
+    text-align: center;
 }
 
 .box {
@@ -42,5 +43,67 @@ grid-column-gap: 1rem;
 grid-row-gap: 4rem;
 }
 
+.iconsearch {
+  position: absolute;
+  margin-left: 7px;
+  margin-top: 1.8rem;
+}
+
+.searchbar {
+  border-radius: 25px;
+  height: 38px;
+  width: 19rem;
+  padding-left: 35px;
+  margin-top: 1.4rem;
+  border: 2px solid;
+  border-color:  #5f3f3f;
+  color:#A0A0A0;
+  font-size: 16px;
+}
+
+.bear {
+   background-image: url("/bear.png");
+  height: 4rem;
+  background-repeat: repeat-x;
+    width: 100%; 
+    margin-top: 9rem;
+}
 
 
+
+
+@media (min-width: 771px) {
+.searchbarContainer {
+    display: none;
+}
+
+  .iconsearch {
+    display: none;
+  }
+
+  .searchbar {
+    display: none;
+  }
+
+
+}
+
+
+
+
+@media (max-width: 770px) {
+
+  .text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .importing {
+display: grid;
+place-content: center;
+grid-template-columns: repeat(2, 14rem);
+grid-template-rows: repeat(2, 14rem);
+grid-column-gap: 1rem;
+grid-row-gap: 4rem;
+}
+}

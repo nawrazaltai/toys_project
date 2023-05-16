@@ -3,13 +3,20 @@ import { AiOutlineSearch } from "react-icons/ai";
 import styles from "./nbar.module.css";
 import { Lilita_One } from 'next/font/google'
 import { Montserrat } from "next/font/google";
+import { useState } from "react";
 
 
 const montserrat = Montserrat({ weight: "200", subsets: ["latin"] });
 const lilitaOne = Lilita_One({ weight: "400", subsets: ["latin"] });
 
+
+
+
+
+
 const Upper = () => {
 
+      const [open, setOpen] = useState(true);
 
     return (
       <div className={styles.test}>
@@ -65,19 +72,19 @@ const Upper = () => {
             </li>
           </ul>
           <div className={styles.hamburgerContainer}>
-            <label className={styles.hamburgermenu}>
+            <label className={styles.hamburgermenu} >
               <input type="checkbox" />
-            </label>
+            </label> 
             <aside className={styles.sidebar}>
-              
-                <div className={styles.sidbarstyle}>Username</div>
-                <div className={styles.sidbarstyle}>About</div>
-                <div className={styles.sidbarstyle}>Categories</div>
-                <div className={styles.sidbarstyle}>Donations</div>
-                <div className={styles.sidbarstyle}>Inbox</div>
-                <div className={styles.sidbarstyle}>Settings</div>
-              
-            </aside>
+            <ul>
+                <li className={styles.sidbarUsername}>Username</li>
+                <li className={styles.sidbarstyle}><Link href="/home" className={styles.linkSidebar}>About</Link></li>
+                <li className={styles.sidbarstyle}><Link href="/home" className={styles.linkSidebar}>Categories</Link></li>
+                <li className={styles.sidbarstyle}><Link href="/home" className={styles.linkSidebar}>Donation</Link></li>
+                <li className={styles.sidbarstyle}><Link href="/home" className={styles.linkSidebar}>Inbox</Link></li>
+                <li className={styles.sidbarstyle}><Link href="/home" className={styles.linkSidebar}>Settings</Link></li>
+              </ul>
+            </aside> 
           </div>
         </div>
       </div>

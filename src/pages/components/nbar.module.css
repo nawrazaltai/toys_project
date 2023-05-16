@@ -3,8 +3,8 @@
 
 
 .test {
-background-image: url("/navbardecoration.png");
-  height: 9rem;
+background-image: url("/navbardecoration3.png");
+  height: 11rem;
   background-repeat: repeat-x;
     width: 100%;
 }
@@ -18,6 +18,7 @@ background-image: url("/navbardecoration.png");
   display: flex;
   justify-content: space-around;
 padding-top: 1rem;
+overflow: hidden;
 }
 
 
@@ -47,13 +48,13 @@ margin-top: 2rem;
 
 .searchbar {
   border-radius: 25px;
-  height: 28px;
+  height: 30px;
   width: 19rem;
   padding-left: 35px;
   margin-top: 2rem;
   border: 2px solid;
   border-color:  #5f3f3f;
-  color:#A0A0A0;
+  color: black;
   font-size: 16px;
 }
 
@@ -85,6 +86,20 @@ margin-top: 2rem;
     display: none;
   }
 
+.description {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.logoupper {
+margin-left: 20px;
+}
+
+.hamburgermenu {
+margin-left: 50px;
+margin-top: 26px;
+}
 
 }
 
@@ -100,19 +115,18 @@ margin-top: 2rem;
 
 
 .hamburgerContainer {
-  margin: 0;
+  margin-left: 
+ 
 }
 
 
 
 .hamburgermenu {
   --x-width: calc(var(--hamburger-height) * 1.41421356237);
-
   display: flex;
   flex-direction: column;
   gap: var(--hamburger-gap);
   width: max-content;
-  
   top: var(--hamburger-margin);
   left: var(--hamburger-margin);
   z-index: 2;
@@ -120,7 +134,7 @@ margin-top: 2rem;
 }
 
 .hamburgermenu:has(input:checked) {
-  --foreground: white;
+  --foreground: #5f3f3f;
   --background: #333;
 }
 
@@ -172,14 +186,18 @@ margin-top: 2rem;
 
 .sidebar {
   transition: translate var(--animation-timing);
-  translate: 170%;
-  padding: 0.5rem 1rem;
-  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  translate: 100%;
+  padding: 0.5rem 3rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 0.3rem);
   background-color: #5f3f3f;
   color: var(--background);
-  max-width: 10rem;
-  min-height: 23.5rem;
-  margin-top: 13.5rem;
+
+  margin-left: -6.4rem;
+  margin-top: 1rem;
+  border-top-left-radius: 25px;
+  width: 13rem;
+  height: 34.5rem;
+  /* text-align: center; */
 }
 
 .hamburgermenu:has(input:checked) + .sidebar {
@@ -189,13 +207,23 @@ margin-top: 2rem;
 .sidbarstyle {
  margin-bottom: 1rem;
    text-decoration: none;
+     list-style-type: none;
+     font-size: 1.2rem;
 }
 
 .sidbarstyle:hover {
    text-decoration: underline;
-     cursor: pointer;
 }
 
-.sidebarUsername {
+.sidbarUsername {
    text-decoration: underline;
+   margin-bottom: 25px;
+     list-style-type: none;
+     text-underline-offset: 8px;
+      font-size: 1.2rem;
+}
+
+.linkSidebar {
+    text-decoration: none;
+    color: white;
 }

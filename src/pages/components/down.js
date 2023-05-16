@@ -53,7 +53,7 @@ const Down = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className={`${lilitaOne.className} ${styles.ulRight}`}>
             <div className={lilitaOne.className}>
               <h2 className={styles.headerFirstUl}>
                 Support

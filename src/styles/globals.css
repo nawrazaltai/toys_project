@@ -8,11 +8,7 @@
 }
 
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
+
 
 :root {
   --bar-width: 35px;
@@ -21,6 +17,6 @@
   --foreground: #5f3f3f;
   --background: white;
   --hamburger-margin: 8px;
-  --animation-timing: 200ms ease-in-out;
+  --animation-timing: 300ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }

@@ -98,7 +98,9 @@ color: #5f3f3f;
 
 @media (max-width: 770px) {
     .logodown {
-       display: none;
+   margin-left: -2.5rem;
+   height: 4rem;
+   width: 7rem;
     }
 
     .textleft {
@@ -120,11 +122,16 @@ color: #5f3f3f;
     .rightbox {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: 2rem;
-  justify-content: flex-end;
+  margin-right: 1rem;
+
 }
 
 .iconsRight {
 display: none;
+}
+
+.ulRight {
+    padding-right: 1rem;
+    margin-left: -1.5rem;
 }
 }
