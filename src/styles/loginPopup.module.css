@@ -22,77 +22,118 @@ COLORS
     z-index: 2;
 }
 
+.closeButton {
+    position: absolute;
+    width: 20px;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: none;
+    top: 1.5em;
+    right: 3em;
+    font-size: xx-large;
+    font-weight: 600;
+    color: #5F3F3F;
+}
+.closeButton:hover {
+    cursor: pointer;
+    color: #BA9F9F;
+}
+
 .text {
     text-align: center;
-    font-family: "Lilita One", cursive;
+    font-family: "Montserrat", sans-serif;
     color: #5f3f3f;
     font-size: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .textOr {
+    margin-top: 1rem;
     text-align: center;
-    font-family: "Lilita One", cursive;
+    font-family: "Montserrat", sans-serif;
     color: #5f3f3f;
     font-size: 1.75rem;
-    margin-bottom: 1rem;
 }
 
-.overlay {  
+.overlay {
     position: fixed;
-    display: flex;
-    align-items: center;
-    border: 2px solid red;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    background-color: #DBDBDB;
+    opacity: 0.7;
+  }
 
-    background-color: orangered;
- 
+.centerContainer {
+    position: absolute;
+    margin-bottom: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    background-color: rgb(156, 187, 187);
-    border-radius: 25px;
+    min-height: 20rem;
+    opacity: 0.9;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
     text-decoration: none;
     font-family: "Lilita One", cursive;
     color: black;
-    height: 50%;
-    width: 50%;
+    height: 90%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-
+    z-index: 10;
 }
 
-.loginWrapper {
-    /* LOGO & FORM container */
-    display: flex;
+.imageContainer {
+    text-align: center;
+    margin-right: 4rem;
+}
+.image {
+    width: 400px;
 }
 
 .form {
-    margin-right: 2rem;
-    min-width: 18rem;
-    max-width: 24rem;
-    color: #5f3f3f;
-    font-size: 1.75rem;
-    font-weight: 400;
-    margin-bottom: 0.5em;
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 18rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #5f3f3f;
 }
 
 .login {
-    text-align: left;
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.input {
+    margin: 0;
+    height: 2rem;
+    border-radius: 4px;
+    background-color: white;
+    border: 1.5px solid #aac9ce;
+    padding-left: 0.5rem;
+    color: black;
+}
+
+.input::placeholder {
+    color: gray;
+    font-family: "Montserrat", sans-serif;
 }
 
 .buttons {
     text-align: left;
-    margin-top: 0.5;
+    margin-top: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -100,10 +141,10 @@ COLORS
 
 .buttonSignIn {
     border: none;
-    margin-top: 1rem;
+    margin-top: 0rem;
     margin-bottom: 1rem;
     width: 100%;
-    height: 1.53em;
+    height: 1.5em;
     border-radius: 50px;
     background-color: #aac9ce;
     font-family: "Lilita One";
@@ -116,9 +157,10 @@ COLORS
 }
 
 .buttonSignUp {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
     width: 100%;
-    height: 1.53em;
+    height: 1.5em;
     border: 1px solid #aac9ce;
     border-radius: 50px;
     background-color: #ffffff;
@@ -149,21 +191,6 @@ COLORS
     cursor: pointer;
 }
 
-.input {
-    height: 2rem;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-    background-color: white;
-    border: 1.5px solid #aac9ce;
-    padding-left: 0.4rem;
-    color: black;
-}
-
-.input::placeholder {
-    color: gray;
-    font-family: "Montserrat", sans-serif;
-}
-
 .error {
     text-align: center;
     color: red;
@@ -181,14 +208,66 @@ COLORS
     margin-right: 1rem;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 770px) {
+/* tablet */
+@media screen and (max-width: 1080px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageContainer {
+        width: 300px;
+        margin: 0;
+        margin-right: 5rem;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 770px) {
+    .closeButton {
+        position: absolute;
+        width: 20px;
+        color: #000000;
+        background-color: #FFFFFF;
+        border: none;
+        top: 1em;
+        right: 1em;
+        font-size: xx-large;
+        font-weight: 600;
+        color: #5F3F3F;
+    }
+    .closeButton:hover {
+        cursor: pointer;
+        color: #BA9F9F;
+    }
+    .imageContainer {
+        margin: 0;
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+    .image {
+        width: 250px;
+    }
+    
+    .container { 
+        border-radius: 50px;
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+
     .input {
         width: 100%;
     }
 
     .form {
-        width: 100%;
-        margin: 0;
+        margin: 2rem;
+        width: 90%;
+    }
+
+    .login {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .buttons {
@@ -198,11 +277,14 @@ COLORS
     }
 
     .buttonSignIn {
+        margin-bottom: 0;
         margin-top: 0;
         margin-right: 2rem;
         width: 40%;
     }
     .buttonSignUp {
+        margin-top: 0;
+        margin-bottom: 0;
         width: 40%;
     }
 

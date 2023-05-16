@@ -91,7 +91,7 @@ export default function Signup(props) {
 
     return (
         <>
-            <div className={styles.overlay}></div>
+            <div onClick={onClose} className={styles.overlay}></div>
             <main className={styles.all}>
                 <button
                     className={styles.closeButton}

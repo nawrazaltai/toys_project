@@ -54,16 +54,19 @@ export default function loginForm(props) {
     }
 
     return (
-        
-            <div className={styles.overlay}>OVEEEEEEEEEEEEEEEERLAAAAAAYYYYYYYYYYYYYYYYY
+        <>
+            <div onClick={onClose} className={styles.overlay}></div>
+            
+            <div className={styles.centerContainer}> 
                 <div className={styles.container}>
-
-                    <div>IMAGE CONTAINER</div>
-                    <button onClick={onClose}>CLOSE X</button>
-                    
+                    <div className={styles.imageContainer}>
+                        <img className={styles.image} src="NavbarLogo.png" alt="Logo image" />
+                    </div>
+                    <button className={styles.closeButton} onClick={onClose}> X</button>
+                        
                     <div className={styles.form} action="">
 
-                     
+                        
 
                         <div className={styles.login}> {/* inputs */}
                             {errorMessage != "" && (
@@ -81,14 +84,14 @@ export default function loginForm(props) {
                                 name="username"
                                 placeholder="Email"
                                 onChange={(e) => setEmail(e.target.value)}
-                            />{" "}
+                            />
                             <br />
                             <input
                                 className={styles.input}
                                 type="password"
                                 placeholder="Password"
                                 onChange={(e) => setPassword(e.target.value)}
-                            />{" "}
+                            />
                             <br />
                         </div>
 
@@ -99,7 +102,7 @@ export default function loginForm(props) {
                             >
                                 Sign in
                             </button>
-                            <p className={styles.textOr}>Already have and account?</p>
+                            <p className={styles.textOr}>Don't have an account?</p>
                             <button
                                 onClick={() => switchToSignup()}
                                 className={styles.buttonSignUp}
@@ -110,5 +113,9 @@ export default function loginForm(props) {
                     </div>
                 </div>
             </div>
+        </>
+  
+        
+            
     );
 }
