@@ -8,7 +8,7 @@ import RecentProducts from "./recentproducts";
 import BrowseByCategory from "./browsebycategory";
 import Signup from "./signup";
 import LoginForm from "./loginForm";
-import LoginPopup from "./loginpopup"
+import LoginPopup from "./loginopup"
 
 export default function Home() {
     const [showSignup, setShowSignup] = useState(false);

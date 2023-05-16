@@ -16,70 +16,133 @@ export default function Signup(props) {
     const [wrongPassword, setWrongPassword] = useState(false);
     const [userNameAvailability, setUserNameAvailability] = useState("");
 
-    useEffect(() => {
-        if (password !== confirmPassword) {
-            setWrongPassword(true);
-            setErrorMessage(
-                "Your password is not matching your current password"
-            );
+  useEffect(() => {
+    if (password !== confirmPassword) {
+      setWrongPassword(true);
+      setErrorMessage("Your password is not matching your current password");
+    } else {
+      setWrongPassword(false);
+      setErrorMessage("");
+    }
+  }, [confirmPassword]);
+
+  function handleSignUp(e) {
+    e.preventDefault();
+    const user = {
+      username: username,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+    };
+    console.log("user: ", user);
+    fetch(`http://localhost:${PORT}/api/users`, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data.users));
+    setUsername("");
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+  }
+
+  function handleUserNameAvailability() {
+
+    const user = {
+      username,
+    };
+
+    fetch("http://localhost:3000/api/usersAvailable", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log("Username data from DB: " + data);
+        if (data.hasUsers) {
+          console.log("Users data from DB");
+          setUserNameAvailability(
+            "Username already taken, Please enter another one"
+          );
         } else {
-            setWrongPassword(false);
-            setErrorMessage("");
+          setUserNameAvailability("");
         }
     }, [confirmPassword]);
-  
-    function handleSignUp(e) {
-        e.preventDefault();
-        const user = {
-            username: username,
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            password: password,
-        };
-        console.log("user: ", user);
-        fetch(`http://localhost:${PORT}/api/users`, {
-            method: "POST",
-            mode: "cors",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(user),
-        })
-            .then((res) => res.json())
-            .then((data) => console.log(data));
-    }
+  }
 
-    function handleUserNameAvailability() {
-        console.log("Running avalible users");
-        console.log("userrrr, ", username);
-        const user = {
-            username,
-        };
-        fetch(`http://localhost:${PORT}/api/usersAvailable`, {
-            method: "POST",
-            mode: "cors",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(user),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                console.log("Username data from DB: " + data);
-                if (data.hasUsers) {
-                    console.log("Users data from DB");
-                    setUserNameAvailability(
-                        "Username already taken, Please enter another one"
-                    );
-                } else {
-                    setUserNameAvailability("");
-                }
-            });
-    }
+  
+  
+    // function handleSignUp(e) {
+    //     e.preventDefault();
+    //     const user = {
+    //         username: username,
+    //         firstName: firstName,
+    //         lastName: lastName,
+    //         email: email,
+    //         password: password,
+    //     };
+    //     console.log("user: ", user);
+    //     fetch(`http://localhost:${PORT}/api/users`, {
+    //         method: "POST",
+    //         mode: "cors",
+    //         headers: {
+    //             Accept: "application/json",
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(user),
+    //     })
+    //         .then((res) => res.json())
+    //         .then((data) => console.log(data));
+    // }
+
+    // function handleUserNameAvailability() {
+    //     console.log("Running avalible users");
+    //     console.log("userrrr, ", username);
+    //     const user = {
+    //         username,
+    //     };
+    //     fetch(`http://localhost:${PORT}/api/usersAvailable`, {
+    //         method: "POST",
+    //         mode: "cors",
+    //         headers: {
+    //             Accept: "application/json",
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(user),
+    //     })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             console.log(data);
+    //             console.log("Username data from DB: " + data);
+    //             if (data.hasUsers) {
+    //                 console.log("Users data from DB");
+    //                 setUserNameAvailability(
+    //                     "Username already taken, Please enter another one"
+    //                 );
+    //             } else {
+    //                 setUserNameAvailability("");
+    //             }
+    //         });
+    // }
+
+    useEffect(() => {
+      handleUserNameAvailability();
+    }, [username]);
 
     return (
         <>
