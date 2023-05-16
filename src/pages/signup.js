@@ -46,7 +46,13 @@ export default function Signup(props) {
       body: JSON.stringify(user),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => console.log(data.users));
+    setUsername("");
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
   }
 
   function handleUserNameAvailability() {
@@ -100,6 +106,7 @@ export default function Signup(props) {
           <div>
             <form onSubmit={handleSignUp} className={styles.signUp}>
               <input
+                value={username}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
@@ -119,6 +126,7 @@ export default function Signup(props) {
               <br />
               <div className={styles.fLName}>
                 <input
+                  value={firstName}
                   className={styles.fName}
                   required
                   onInvalid={(e) =>
@@ -133,6 +141,7 @@ export default function Signup(props) {
                 />
                 <br />
                 <input
+                  value={lastName}
                   className={styles.lName}
                   required
                   onInvalid={(e) =>
@@ -148,6 +157,7 @@ export default function Signup(props) {
               </div>
               <br />
               <input
+                value={email}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
@@ -162,6 +172,7 @@ export default function Signup(props) {
               />
               <br />
               <input
+                value={password}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
@@ -176,6 +187,7 @@ export default function Signup(props) {
               />
               <br />
               <input
+                value={confirmPassword}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
