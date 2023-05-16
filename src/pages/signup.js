@@ -50,7 +50,7 @@ export default function Signup(props) {
   }
 
   function handleUserNameAvailability() {
-    console.log("Running avalible users");
+    console.log("Running available users");
     console.log("userrrr, ", username);
     const user = {
       username,

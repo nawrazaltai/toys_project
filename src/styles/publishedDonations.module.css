@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap");
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 90vh;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 143px;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.donatorToyLover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
