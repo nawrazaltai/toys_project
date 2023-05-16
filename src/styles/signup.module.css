@@ -25,8 +25,7 @@
     height: 100%;
     z-index: 5;
     top: 0;
-    background-color: #DBDBDB
-;
+    background-color: #DBDBDB;
     opacity: 0.7;
   }
   .all {
@@ -462,9 +461,7 @@
     display: flex;
     width: 17em;
     flex-direction: column;
-  }  
-
-  .section {
+  }  .section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -488,10 +485,8 @@
     height: 30px;
     margin-left: 2em;
     padding-left: 0.5em;
-    background: #FFFFFF
-;
-    border: 1px solid #AAC9CE
-;
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
   }
   .fLName {
     display: flex;
@@ -504,28 +499,22 @@
     height: 30px;
     margin-left: 2em;
     padding-left: 0.5em;
-    background: #FFFFFF
-;
-    border: 1px solid #AAC9CE
-;
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
   }
   .lName {
     border-radius: 6px;
     width: 125px;
     height: 30px;
     padding-left: 0.5em;
-    background: #FFFFFF
-;
-    border: 1px solid #AAC9CE
-;
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
   }  .button1 {
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #AAC9CE
-;
-    border: 1px solid #AAC9CE
-;
+    background: #AAC9CE;
+    border: 1px solid #AAC9CE;
     border-radius: 28.7495px;
   }
   .button1:hover {
@@ -560,10 +549,8 @@
     box-sizing: border-box;
     width: 1.5em;
     margin-left: 2.5em;
-    background: #FFFFFF
-;
-    border: 1px solid #000000
-;
+    background: #FFFFFF;
+    border: 1px solid #000000;
   }
   .checkbox:hover {
     cursor: pointer;
@@ -581,29 +568,24 @@
     font-weight: 400;
     line-height: 28px;
     margin-left: 4em;
-    color: #000000
-;
+    color: #000000;
   }
   .button2 {
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #FFFFFF
-;
-    border: 1px solid #AAC9CE
-;
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
     border-radius: 28.7495px;
   }
   .button2:hover {
     cursor: pointer;
-    background-color: #AAC9CE
-;
+    background-color: #AAC9CE;
   }
   .buttonText {
     font-family: "Lilita One";
     font-style: normal;
     font-weight: 400;
-    color: #5F3F3F
-;
+    color: #5F3F3F;
   }
 }
