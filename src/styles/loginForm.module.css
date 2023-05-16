@@ -23,6 +23,7 @@ COLORS
 }
 
 .text {
+    text-align: center;
     font-family: "Lilita One", cursive;
     color: #5f3f3f;
     font-size: 1.75rem;
@@ -33,7 +34,7 @@ COLORS
     font-family: "Lilita One", cursive;
     color: #5f3f3f;
     font-size: 1.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .container {
@@ -83,7 +84,7 @@ COLORS
 
 .buttonSignIn {
     border: none;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     width: 100%;
     height: 1.53em;
@@ -99,6 +100,7 @@ COLORS
 }
 
 .buttonSignUp {
+    margin-bottom: 1rem;
     width: 100%;
     height: 1.53em;
     border: 1px solid #aac9ce;
@@ -134,7 +136,7 @@ COLORS
 .input {
     height: 2rem;
     border-radius: 4px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
     background-color: white;
     border: 1.5px solid #aac9ce;
     padding-left: 0.4rem;
@@ -147,18 +149,16 @@ COLORS
 }
 
 .error {
-    font-size: 1.2rem;
+    text-align: center;
+    color: red;
+    font-family: "Lilita One", cursive;
+    font-size: 1rem;
     position: relative;
-    height: 5rem;
     min-width: 10rem;
     top: -5%;
-    border: 4px solid rgb(206, 10, 10);
-    border-radius: 2.5rem;
-    background-color: lightcoral;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
 }
 
 .icon {

@@ -1,23 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&display=swap");
-
-@media (min-width: 1023px) {
-  /* For desktop: */
-
-  .closeButton {
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&display=swap");@media (min-width: 1023px) {
+  /* For desktop: */  .closeButton {
     position: absolute;
     width: 20px;
-    color: #000000;
-    background-color: #ffffff;
+    color: #000000
+;
+    background-color: #FFFFFF
+;
     border: none;
     top: 1.5em;
     right: 3em;
     font-size: xx-large;
     font-weight: 600;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
   }
   .closeButton:hover {
     cursor: pointer;
-    color: #ba9f9f;
+    color: #BA9F9F
+;
   }
   .overlay {
     position: fixed;
@@ -25,7 +25,7 @@
     height: 100%;
     z-index: 5;
     top: 0;
-    background-color: #dbdbdb;
+    background-color: #DBDBDB;
     opacity: 0.7;
   }
   .all {
@@ -36,7 +36,8 @@
     right: 0;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #FFFFFF
+;
     width: 90vw;
     height: 90vh;
     min-height: 40rem;
@@ -65,25 +66,27 @@
     display: flex;
     flex-direction: column;
     height: 30em;
-  }
-
-  .textH2 {
+  }  .textH2 {
     font-family: "Lilita One";
     font-style: normal;
     font-weight: 400;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
   }
   .textP {
     font-family: "Lilita One";
     font-style: normal;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
   }
   .username {
     border-radius: 6px;
     height: 30px;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
   }
   .fLName {
     display: flex;
@@ -95,19 +98,21 @@
     border-radius: 6px;
     height: 30px;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
   }
   .lName {
     border-radius: 6px;
     height: 30px;
     width: 200px;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
-  }
-
-  .boxTerms {
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
+  }  .boxTerms {
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -118,14 +123,17 @@
     font-weight: 400;
     font-size: 22.6451px;
     line-height: 28px;
-    color: #000000;
+    color: #000000
+;
   }
   .checkbox {
     box-sizing: border-box;
     width: 1.5em;
     margin-left: 2em;
-    background: #ffffff;
-    border: 1px solid #000000;
+    background: #FFFFFF
+;
+    border: 1px solid #000000
+;
   }
   .checkbox:hover {
     cursor: pointer;
@@ -141,22 +149,24 @@
     width: 320.21px;
     height: 39.4px;
     margin-left: 2.5em;
-    background: #aac9ce;
-    border: 1px solid #aac9ce;
+    background: #AAC9CE
+;
+    border: 1px solid #AAC9CE
+;
     border-radius: 28.7495px;
     cursor: pointer;
   }
   .button1:hover {
     cursor: pointer;
     background-color: whitesmoke;
-  }
-
-  .disabled {
+  }  .disabled {
     width: 320.21px;
     height: 39.4px;
     margin-left: 2.5em;
-    background: #aac9ce;
-    border: 1px solid #aac9ce;
+    background: #AAC9CE
+;
+    border: 1px solid #AAC9CE
+;
     border-radius: 28.7495px;
     cursor: pointer;
     pointer-events: none;
@@ -169,20 +179,22 @@
     font-size: 22.6451px;
     line-height: 28px;
     margin-left: 1.5em;
-    color: #000000;
-  }
-
-  .button2 {
+    color: #000000
+;
+  }  .button2 {
     width: 320.21px;
     height: 39.4px;
     margin-left: 2.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
     border-radius: 28.7495px;
   }
   .button2:hover {
     cursor: pointer;
-    background-color: #aac9ce;
+    background-color: #AAC9CE
+;
   }
   .buttonText {
     font-family: "Lilita One";
@@ -190,7 +202,8 @@
     font-weight: 400;
     font-size: 24.0022px;
     line-height: 27px;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -198,17 +211,21 @@
   .closeButton {
     position: absolute;
     width: 20px;
-    color: #000000;
-    background-color: #ffffff;
+    color: #000000
+;
+    background-color: #FFFFFF
+;
     border: none;
     font-size: xx-large;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
     right: 0.5em;
     top: 0.25em;
   }
   .closeButton:hover {
     cursor: pointer;
-    color: #ba9f9f;
+    color: #BA9F9F
+;
   }
   .overlay {
     position: fixed;
@@ -216,7 +233,8 @@
     height: 100%;
     z-index: 5;
     top: 0;
-    background-color: #dbdbdb;
+    background-color: #DBDBDB
+;
     opacity: 0.7;
   }
   .all {
@@ -233,7 +251,8 @@
     width: 75vw;
     height: 100vh;
     min-height: 40rem;
-    background-color: #ffffff;
+    background-color: #FFFFFF
+;
     border-radius: 20px;
     padding: 7em;
     opacity: 95%;
@@ -253,7 +272,8 @@
     font-family: "Lilita One";
     font-style: normal;
     font-weight: 400;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
     align-self: center;
     padding-bottom: 0.5em;
   }
@@ -267,8 +287,10 @@
     height: 30px;
     margin-left: 2em;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
   }
   .fLName {
     display: flex;
@@ -281,24 +303,28 @@
     height: 30px;
     margin-left: 2em;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
   }
   .lName {
     border-radius: 6px;
     width: 125px;
     height: 30px;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
-  }
-
-  .button1 {
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
+  }  .button1 {
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #aac9ce;
-    border: 1px solid #aac9ce;
+    background: #AAC9CE
+;
+    border: 1px solid #AAC9CE
+;
     border-radius: 28.7495px;
   }
   .button1:hover {
@@ -309,8 +335,10 @@
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #aac9ce;
-    border: 1px solid #aac9ce;
+    background: #AAC9CE
+;
+    border: 1px solid #AAC9CE
+;
     border-radius: 28.7495px;
     cursor: pointer;
     pointer-events: none;
@@ -325,15 +353,16 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    color: #000000;
-  }
-
-  .checkbox {
+    color: #000000
+;
+  }  .checkbox {
     box-sizing: border-box;
     width: 1.5em;
     margin-left: 2.5em;
-    background: #ffffff;
-    border: 1px solid #000000;
+    background: #FFFFFF
+;
+    border: 1px solid #000000
+;
   }
   .checkbox:hover {
     cursor: pointer;
@@ -351,44 +380,51 @@
     font-weight: 400;
     line-height: 28px;
     margin-left: 4em;
-    color: #000000;
+    color: #000000
+;
   }
   .button2 {
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF
+;
+    border: 1px solid #AAC9CE
+;
     border-radius: 28.7495px;
   }
   .button2:hover {
     cursor: pointer;
-    background-color: #aac9ce;
+    background-color: #AAC9CE
+;
   }
   .buttonText {
     font-family: "Lilita One";
     font-style: normal;
     font-weight: 400;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
   }
 }
 @media (max-width: 770px) {
-  /* For Mobile: */
-
-  .closeButton {
+  /* For Mobile: */  .closeButton {
     position: absolute;
     width: 20px;
-    color: #000000;
-    background-color: #ffffff;
+    color: #000000
+;
+    background-color: #FFFFFF
+;
     border: none;
     font-size: xx-large;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
     right: 0.5em;
     top: 0.25em;
   }
   .closeButton:hover {
     cursor: pointer;
-    color: #ba9f9f;
+    color: #BA9F9F
+;
   }
   .overlay {
     position: fixed;
@@ -396,7 +432,8 @@
     height: 100%;
     z-index: 5;
     top: 0;
-    background-color: #dbdbdb;
+    background-color: #DBDBDB
+;
     opacity: 0.7;
   }
   .all {
@@ -413,7 +450,8 @@
     width: 80vw;
     height: 100vh;
     min-height: 40rem;
-    background-color: #ffffff;
+    background-color: #FFFFFF
+;
     border-radius: 20px;
     padding: 7em;
     opacity: 95%;
@@ -423,9 +461,7 @@
     display: flex;
     width: 17em;
     flex-direction: column;
-  }
-
-  .section {
+  }  .section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -435,23 +471,22 @@
     font-family: "Lilita One";
     font-style: normal;
     font-weight: 400;
-    color: #5f3f3f;
+    color: #5F3F3F
+;
     align-self: center;
     padding-bottom: 0.5em;
   }
   .textP {
     display: none;
-  }
-
-  .username {
+  }  .username {
     display: flex;
     border-radius: 6px;
     width: 260px;
     height: 30px;
     margin-left: 2em;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
   }
   .fLName {
     display: flex;
@@ -464,24 +499,22 @@
     height: 30px;
     margin-left: 2em;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
   }
   .lName {
     border-radius: 6px;
     width: 125px;
     height: 30px;
     padding-left: 0.5em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
-  }
-
-  .button1 {
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
+  }  .button1 {
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #aac9ce;
-    border: 1px solid #aac9ce;
+    background: #AAC9CE;
+    border: 1px solid #AAC9CE;
     border-radius: 28.7495px;
   }
   .button1:hover {
@@ -492,8 +525,10 @@
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #aac9ce;
-    border: 1px solid #aac9ce;
+    background: #AAC9CE
+;
+    border: 1px solid #AAC9CE
+;
     border-radius: 28.7495px;
     cursor: pointer;
     pointer-events: none;
@@ -508,14 +543,13 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    color: #000000;
-  }
-
-  .checkbox {
+    color: #000000
+;
+  }  .checkbox {
     box-sizing: border-box;
     width: 1.5em;
     margin-left: 2.5em;
-    background: #ffffff;
+    background: #FFFFFF;
     border: 1px solid #000000;
   }
   .checkbox:hover {
@@ -540,18 +574,18 @@
     width: 299.21px;
     height: 30px;
     margin-left: 1em;
-    background: #ffffff;
-    border: 1px solid #aac9ce;
+    background: #FFFFFF;
+    border: 1px solid #AAC9CE;
     border-radius: 28.7495px;
   }
   .button2:hover {
     cursor: pointer;
-    background-color: #aac9ce;
+    background-color: #AAC9CE;
   }
   .buttonText {
     font-family: "Lilita One";
     font-style: normal;
     font-weight: 400;
-    color: #5f3f3f;
+    color: #5F3F3F;
   }
 }

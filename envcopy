@@ -1,0 +1,6 @@
+// this file is not used, create a .env.local file and paste this in:
+
+DB_HOST: "45.79.250.211"
+DB_DATABASE: "test_db"
+DB_USERNAME: "test"
+DB_PASSWORD: "password"
