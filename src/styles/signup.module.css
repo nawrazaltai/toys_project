@@ -39,7 +39,6 @@
     background-color: #ffffff;
     width: 90vw;
     height: 90vh;
-    min-height: 40rem;
     border-radius: 100px;
     gap: 5em;
     opacity: 95%;
@@ -220,19 +219,17 @@
     opacity: 0.7;
   }
   .all {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    margin-top: 34em;
     width: 75vw;
-    height: 100vh;
-    min-height: 40rem;
+    height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 7em;
@@ -400,19 +397,17 @@
     opacity: 0.7;
   }
   .all {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    margin-top: 34em;
     width: 80vw;
-    height: 100vh;
-    min-height: 40rem;
+    height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 7em;
@@ -421,10 +416,8 @@
   }
   .logo {
     display: flex;
-    width: 17em;
     flex-direction: column;
   }
-
   .section {
     display: flex;
     justify-content: center;
