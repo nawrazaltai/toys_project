@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/signup.module.css";
 
+const PORT = 3000;
+
 export default function Signup(props) {
   const { onClose } = props;
   const [username, setUsername] = useState("");
@@ -34,7 +36,7 @@ export default function Signup(props) {
       password: password,
     };
     console.log("user: ", user);
-    fetch("http://localhost:3000/api/users", {
+    fetch(`http://localhost:${PORT}/api/users`, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -44,7 +46,13 @@ export default function Signup(props) {
       body: JSON.stringify(user),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => console.log(data.users));
+    setUsername("");
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
   }
 
   function handleUserNameAvailability() {
@@ -74,7 +82,9 @@ export default function Signup(props) {
         }
       });
   }
-
+  useEffect(() => {
+    handleUserNameAvailability();
+  }, [username]);
   return (
     <>
       <div className={styles.overlay}></div>
@@ -96,6 +106,7 @@ export default function Signup(props) {
           <div>
             <form onSubmit={handleSignUp} className={styles.signUp}>
               <input
+                value={username}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
@@ -115,6 +126,7 @@ export default function Signup(props) {
               <br />
               <div className={styles.fLName}>
                 <input
+                  value={firstName}
                   className={styles.fName}
                   required
                   onInvalid={(e) =>
@@ -129,6 +141,7 @@ export default function Signup(props) {
                 />
                 <br />
                 <input
+                  value={lastName}
                   className={styles.lName}
                   required
                   onInvalid={(e) =>
@@ -144,6 +157,7 @@ export default function Signup(props) {
               </div>
               <br />
               <input
+                value={email}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
@@ -158,6 +172,7 @@ export default function Signup(props) {
               />
               <br />
               <input
+                value={password}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
@@ -172,6 +187,7 @@ export default function Signup(props) {
               />
               <br />
               <input
+                value={confirmPassword}
                 className={styles.username}
                 required
                 onInvalid={(e) =>
@@ -209,7 +225,9 @@ export default function Signup(props) {
               <label className={styles.text1}>Already have an account</label>
               <br />
               <button className={styles.button2}>
-                <p className={styles.buttonText}>Sign in</p>
+                <p className={styles.buttonText} onClick={onClose}>
+                  Sign in
+                </p>
               </button>
             </form>
           </div>

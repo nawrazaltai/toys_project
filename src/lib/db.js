@@ -12,12 +12,12 @@ const db = mysql({
 });
 
 export default async function executeQuery({ query, values }) {
-  try {
-    const results = await db.query(query, values);
-    await db.end();
-    return results;
-  } catch (error) {
-    console.log("ERROR!", error);
-    return { error };
-  }
+    try {
+        const results = await db.query(query, values);
+        await db.end();
+        return results;
+    } catch (error) {
+        console.log("ERROR!", error);
+        return { error };
+    }
 }

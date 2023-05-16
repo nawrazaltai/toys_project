@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.85em;
+}
+
+.aboutDiv {
+    width: 80%;
+    max-width: 70.8125em;
+    margin: 0 2em;
+    text-align: left;
+}
+
+.companyDescriptionAbout {
+    width: 80%;
+    max-width: 70.8125em;
+    margin: 0 2em;
+    text-align: left;
+    margin-top: 2.85em;
+}
+
+.textH2 {
+    font-family: 'Lilita One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.8125em;
+    line-height: 70px;
+    color: #5F3F3F;
+}
+
+.textP {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 20px;
+    color: #5F3F3F;
+    text-align: left;
+}
+
+.imageDiv {
+    margin-top: 2.85em;
+    width: 80%;
+    max-width: 70.8125em;
+}
+
+.image {
+    width: 100%;
+    height: 31.625em;
+    object-fit: cover;
+    
+}
+
+.vector {
+    margin-top: 2.85em;
+    width: 100%;
+    height: 3em;
+    background-image: url("/Vector.png");
+    background-repeat: repeat;
+}
+
+.textH3 {
+    font-family: 'Lilita One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    color: #5F3F3F;
+}
+
+.faqContainer {
+    width: 80%;
+    max-width: 60em;
+    margin: 2em auto;
+    padding: 2em;
+    border: 1px solid;
+    border-radius: 44px;
+}
+
+.faqQuestions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+.faqAnswer {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: left;
+    border-top: 1px solid;
+    padding: 1em;
+    
+}
+
+.whiteSpace {
+    height: 10em;
+}
+
+
+
+
+

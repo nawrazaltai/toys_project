@@ -7,6 +7,7 @@ import landingImg from "../../public/landingimage.jpg";
 import RecentProducts from "./recentproducts";
 import BrowseByCategory from "./browsebycategory";
 import Signup from "./signup";
+import LoginForm from "./loginForm";
 
 export default function Home() {
   const [username, setUsername] = useState("");

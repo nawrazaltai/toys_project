@@ -17,30 +17,33 @@ export default async function login(req, res) {
 
         // if nothing comes from query
         if (result.length === 0) {
-            response.push(
-                res.status(500).json({ message: "Couldn't find email!" })
-            );
-        } else if (userDb.password === userClient.password) {
-            // create jwt token
-            console.log("username : ", userDb.username);
-            const token = jwt.sign(userDb.id, SECRET);
-            response.push(
-                res.status(200).json({
-                    id: userDb.id,
-                    username: userDb.username,
-                    token: token,
-                    isLoggedIn: true,
+            return response.push(
+                res.status(403).json({
+                    message: "Email or password is invalid"
                 })
             );
-            console.log("REEESPONSE", response);
+      
+        } else if (userDb.password === userClient.password) {
+            console.log(userDb.user_id, userDb.username, userDb)
+            // create jwt token
+            const token = jwt.sign(userDb.user_id, SECRET);
+       
+                res.status(200).json({
+                    userId: userDb.user_id,
+                    username: userDb.username,
+                    firstName: userDb.first_name,
+                    lastName: userDb.last_name,
+                    token: token, 
+                    isLoggedIn: true
+                })                      
         } else {
-            response.push(
+            return response.push(
                 res.status(403).json({
-                    message: "password or email is not correct!",
+                    message: "Email or password is invalid"
                 })
             );
         }
 
-        return response;
+        
     }
 }
