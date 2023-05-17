@@ -5,18 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 // import ProductCard from "./productcard";
 import { useRouter } from "next/router";
-
 const PORT = 3000;
-
 export default function RecentProducts() {
     const router = useRouter();
     const query = router.query; /* states, user-data from loginForm */
     console.log("QUERY :: ", query.isLoggedIn)
-
     const [products, setProducts] = useState([]);
-
     async function FetchProducts() {
-        const response = await fetch(`http://localhost:${PORT}/api/products`, {
+        const response = await fetch("http://localhost:${PORT}/api/products", {
             //"https://planetscale-test-navy.vercel.app/api/products"
             method: "GET",
             mode: "cors",
@@ -28,29 +24,24 @@ export default function RecentProducts() {
         const jsonData = await response.json();
         setProducts(jsonData.products);
     }
-
     console.log(products, "PRODUCTS");
     const topThree = products.slice(0, 3);
     const topFour = products.slice(0, 4);
-
     useEffect(() => {
         FetchProducts();
     }, []);
-
     return (
         <div className={styles.recent_products_container}>
-            {query.isLoggedIn && 
+            {query.isLoggedIn &&
                 <div className={styles.recent_products_greeting}>
                     <p>Welcome {query.username} to Rejoy!</p>
                 </div>
             }
-            
             <div className={styles.recent_products_title_div}>
                 <h2 className={styles.recent_products_h2}>
                     Most recently published donations
                 </h2>
             </div>
-
             {/* <div className={styles.recent_three_products_div}>
         {topThree.map((product) => {
           return <ProductCard product={product} />;
@@ -85,7 +76,6 @@ export default function RecentProducts() {
                     );
                 })}
             </div>
-
             {/* <div className={styles.recent_four_products_div}>
         {topFour.map((product) => {
           console.log(product);
