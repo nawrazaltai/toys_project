@@ -4,5 +4,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* font-family: "Lilita One"; */
+  font-family: "Lilita One";
+}
+
+
+
+
+:root {
+  --bar-width: 35px;
+  --bar-height: 4px;
+  --hamburger-gap: 6px;
+  --foreground: #5f3f3f;
+  --background: white;
+  --hamburger-margin: 8px;
+  --animation-timing: 300ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }

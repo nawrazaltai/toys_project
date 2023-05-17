@@ -9,7 +9,7 @@ const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`;
 
 export default function loginForm(props) {
-    const { showFunction } = props;
+    const { showSignupFunc } = props
     const router = useRouter();
     const href = "/recentproducts";
     // const href = "/TESTprofile";
@@ -19,10 +19,6 @@ export default function loginForm(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
-
-    function closeModal() {
-        setShow(false);
-    }
 
     function LoginFunc(e) {
         e.preventDefault();
@@ -62,15 +58,12 @@ export default function loginForm(props) {
             <div className={styles.form} action="">
                 <div className={styles.login}>
                     {errorMessage != "" && (
-                        <div
+                        <p
                             className={styles.error}
                             onClick={() => setErrorMessage("")}
                         >
-                            <span className={styles.icon}>*icon*</span>
-                            <p className={styles.errorMessage}>
-                                {errorMessage}
-                            </p>
-                        </div>
+                            {errorMessage}
+                        </p>        
                     )}
                     <p className={styles.text}>Login to your account</p>
                     <input
@@ -97,10 +90,10 @@ export default function loginForm(props) {
                     >
                         Sign in
                     </button>
-                    <p className={styles.textOr}>Or</p>
+                    <p className={styles.textOr}>or</p>
 
                     <button
-                        onClick={() => showFunction(true)}
+                        onClick={() => showSignupFunc(true)}
                         className={styles.buttonSignUp}
                     >
                         Sign up
