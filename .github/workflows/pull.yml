@@ -10,13 +10,12 @@ jobs:
     - name: Mirror + trigger CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
-        args: "https://gitlab.com/hardi.kakalaw/toys_project.git"
+        args: "git@gitlab.com:hardi.kakalaw/toys_devops.git"
       env:
         FOLLOW_TAGS: "false"
         FORCE_PUSH: "false"
         GITLAB_HOSTNAME: "gitlab.com"
         GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: "glpat-5qQiqfzhbgoR7sFiVVL2"
-        GITLAB_PROJECT_ID: "45703278"
-        GITHUB_TOKEN: "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"
-        GIT_PUSH_URL: "https://oauth2:${GITLAB_PASSWORD}@gitlab.com/hardi.kakalaw/toys_project.git"
+        GITLAB_PASSWORD: "glpat-ZqC6UqwHzUkVaT9ptng4"
+        GITLAB_PROJECT_ID: "46116784" 
+        GITHUB_TOKEN: "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"
