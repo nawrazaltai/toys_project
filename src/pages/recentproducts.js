@@ -34,7 +34,7 @@ export default function RecentProducts() {
     useEffect(() => {
         FetchProducts();
     }, []);
-
+   
     return (
         <div className={styles.recent_products_container}>
             <div className={styles.recent_products_greeting}>
@@ -169,27 +169,19 @@ return <ProductCard product={product} />;
 </div> */}
 <div className={styles.recent_four_products_div}>
 {topFour.map((product) => {
-return (
-<div className={styles.home_product_outer_border}>
- <article className={styles.home_product_article}>
-  <Image
- width={2000}
- height={3000}
- src={product.url}
-alt={product.description}
- />
+      return (
+         <div className={styles.home_product_outer_border}>
+            <article className={styles.home_product_article}>
+                  <Image width={2000} height={3000} src={product.url} alt={product.description}/>
 {/* <img src={product.url} alt={product.description} /> */}
-<h4 className={styles.home_product_title}>
-{product.product_title}
-</h4>
-<Link className={styles.home_product_link} href={"/"}>
- View
- </Link>
- </article>
+                  <h4 className={styles.home_product_title}>{product.product_title}</h4>
+                  <Link className={styles.home_product_link} href={"/"}>View </Link>
+            </article>
  </div>
  );
  })}
    </div>
  </div>
- );
+  );
  }
+
