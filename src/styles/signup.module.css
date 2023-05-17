@@ -32,10 +32,11 @@
     margin-right: auto;
     left: 0;
     right: 0;
+    top: 2em;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    width: 90vw;
+    width: 90%;
     height: 90vh;
     border-radius: 100px;
     gap: 5em;
@@ -62,6 +63,7 @@
     display: flex;
     flex-direction: column;
     height: 30em;
+    font-family: "Montserrat", sans-serif;
   }
   .textH2 {
     font-family: "Lilita One";
@@ -80,6 +82,7 @@
     padding-left: 0.5em;
     background: #ffffff;
     border: 1px solid #aac9ce;
+    font-family: "Montserrat", sans-serif;
   }
   .fLName {
     display: flex;
@@ -93,6 +96,7 @@
     padding-left: 0.5em;
     background: #ffffff;
     border: 1px solid #aac9ce;
+    font-family: "Montserrat", sans-serif;
   }
   .lName {
     border-radius: 6px;
@@ -101,6 +105,7 @@
     padding-left: 0.5em;
     background: #ffffff;
     border: 1px solid #aac9ce;
+    font-family: "Montserrat", sans-serif;
   }
   .boxTerms {
     display: flex;
@@ -222,6 +227,7 @@
     margin-right: auto;
     left: 0;
     right: 0;
+    top: 3em;
     width: 75vw;
     height: 90vh;
     background-color: #ffffff;
@@ -398,6 +404,7 @@
     margin-right: auto;
     left: 0;
     right: 0;
+    top: 3em;
     width: 80vw;
     height: 90vh;
     background-color: #ffffff;
