@@ -1,0 +1,30 @@
+.categoriesContainer{
+margin-top: 5rem;
+}
+
+.upperButtons{
+display: flex;
+justify-content: center;
+}
+
+.lowerButtons{
+    display: flex;
+justify-content: center;
+}
+
+.buttonstyle{
+background-color: white;
+padding-top: 1rem;
+padding-bottom: 1rem;
+padding-left: 2rem;
+padding-right: 2rem;
+border-radius: 13px;
+margin-top: 2rem;
+margin-right: 2rem;
+width: 9rem;
+height: 4rem;
+font-size: 20px;
+font-weight: 500;
+color:  #5f3f3f;
+border: 1px solid  #5f3f3f;;
+}
