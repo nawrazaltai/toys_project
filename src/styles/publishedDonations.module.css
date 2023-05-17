@@ -3,19 +3,152 @@
 .main {
   display: flex;
   flex-direction: column;
-  width: 70vw;
-  height: 90vh;
-  border: 1px solid black;
+  width: 60vw;
+  height: auto;
   margin: auto;
   margin-top: 143px;
+  gap: 1em;
 }
 .section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.homeLink {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5f3f3f;
+}
 .donatorToyLover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 2em;
+}
+.imgSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0cad2;
+  box-shadow: 1px 9px 4px rgba(0, 0, 0, 0.33),
+    inset -8px -4px 4px rgba(0, 0, 0, 0.4),
+    inset 11px 12px 4px rgba(0, 0, 0, 0.57);
+  border-radius: 68px;
+  width: 60vw;
+  height: 622px;
+  gap: 2em;
+}
+.img {
+  width: 271px;
+  height: 432px;
+}
+.sideImg {
+  height: 212px;
+}
+.bookMark {
+  position: absolute;
+  font-size: xx-large;
+
+  margin-top: 1em;
+}
+.lessGreat {
+  font-size: xx-large;
+  font-weight: 400;
+}
+.desSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.title1 {
+  font-family: "Lilita One";
+  color: #5f3f3f;
+  font-weight: 400;
+  font-size: 45.5852px;
+  line-height: 52px;
+  margin-left: 0.2em;
+}
+.locationMadagascar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  color: #5f3f3f;
+  margin-left: 0.3em;
+}
+.title3 {
+  font-family: "Lilita One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  color: #5f3f3f;
+  margin-left: 0.3em;
+}
+.good {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #5f3f3f;
+  margin-left: 0.6em;
+}
+.desP {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5f3f3f;
+  margin-left: 0.6em;
+}
+.mesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.writeMesSection {
+  background: #ddd0d0;
+  border-radius: 21.5495px;
+  width: 60vw;
+  height: 15.8em;
+}
+.writeMes {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5f3f3f;
+  margin: 1em auto auto 1em;
+}
+.button {
+  background: #aac9ce;
+  border-radius: 28.75px;
+  border: none;
+  width: 8.1em;
+  height: 3.4em;
+}
+.button:hover {
+  cursor: pointer;
+  background: #6ad0dd;
+}
+.btnText {
+  font-family: "Lilita One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27.0201px;
+  line-height: 31px;
+  color: #5f3f3f;
 }
