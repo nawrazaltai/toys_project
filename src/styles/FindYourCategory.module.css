@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.85em;
+}
+
+.aboutDiv {
+    width: 80%;
+    max-width: 70.8125em;
+    margin: 0 2em;
+    text-align: left;
+}
+
+.textP {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 20px;
+    color: #5F3F3F;
+    text-align: left;
+}
+
+.h2Div {
+    margin-top: 2.85em;
+}
+
+.textH2 {
+    font-family: 'Lilita One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 61px;
+    line-height: 70px;
+    text-align: center;
+    color: #5F3F3F;
+}
+
+.categoryContainer {
+    margin-top: 2.85em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70.8125em;
+}
+
+.category {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7em;
+    position: relative;
+}
+
+.category a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    cursor: default;
+}
+
+.category img {
+    width: 13.625em;
+    height: 13.625em;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1.375em;
+    background: rgba(95, 63, 63, 0.5);
+}
+
+.category a img {
+    border: 0;
+    transition: border 0.3s ease;
+}
+
+.category a:hover img {
+    border: 0.25em solid #E5C1CD;
+}
+
+.category a:hover .viewCategoryButton {
+    background-color: #E5C1CD; 
+    
+}
+
+.viewCategoryButton {
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #AAC9CE;
+    color: #5F3F3F;
+    border: none;
+    border-radius: 1.79684375em;
+    font-family: 'Lilita One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 27px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.categoryText {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lilita One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5em;
+    color: #AAC9CE;
+}
+
+.category a:hover .categoryText {
+    color: white;
+    
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(95, 63, 63, 0.5);
+    border-radius: 1.375em;
+}
+
+@media (max-width: 768px) {
+    .category {
+        width: 50%; 
+    }
+}
+
+@media (max-width: 520px) {
+    .category {
+        width: 100%; 
+    }
+}
+
+
+
