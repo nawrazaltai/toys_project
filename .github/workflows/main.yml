@@ -19,4 +19,4 @@ jobs:
         GITLAB_PASSWORD: "glpat-UQWHkL5nw9VAo9pgd6Jd"
         GITLAB_PROJECT_ID: "46116784"
         GITHUB_TOKEN: "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"
-        GIT_PUSH_URL: "https://oauth2:${GITLAB_PASSWORD}@gitlab.com/hardi.kakalaw/toys_project.git"
+        
