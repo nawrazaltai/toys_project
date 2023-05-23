@@ -1,0 +1,25 @@
+name: Sync to GitLab
+
+on:
+  push:
+    branches:
+      - development  
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up GitLab remote
+        run: |
+          git remote add gitlab https://gitlab.com/hardi.kakalaw/toys_devops.git
+          git config --global user.email "hardi.kakalaw@chasacademy.se"
+          git config --global user.name "hardi.kakalaw"
+          git remote -v
+
+      - name: Push to GitLab
+        run: |
+          git push gitlab development
