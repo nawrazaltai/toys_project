@@ -1,9 +1,8 @@
 name: Sync to GitLab
 
 on:
-  push:
-    branches:
-      - development  
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   sync:
@@ -15,7 +14,7 @@ jobs:
 
       - name: Set up GitLab remote
         run: |
-          git remote add gitlab https://hardi.kakalaw:glpat-jFzVMpvttNtL2ui8H5zs@gitlab.com/hardi.kakalaw/toys_devops.git
+          git remote add gitlab https://gitlab.com/hardi.kakalaw/toys_devops.git
           git config --global user.email "hardi.kakalaw@chasacademy.se"
           git config --global user.name "hardi.kakalaw"
           git remote -v
