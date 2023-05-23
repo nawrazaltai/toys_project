@@ -17,5 +17,5 @@ jobs:
         GITLAB_HOSTNAME: "gitlab.com"
         GITLAB_USERNAME: "hardi.kakalaw"
         GITLAB_PASSWORD: "glpat-UhH1rqXvSktjVP4yo61r"
-        GITLAB_PROJECT_ID: "46116784" 
+        GITLAB_PROJECT_ID: "45703278" 
         GITHUB_TOKEN: "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"
