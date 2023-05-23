@@ -1,0 +1,21 @@
+name: Mirror and run GitLab CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Mirror + trigger CI
+      uses: SvanBoxel/gitlab-mirror-and-ci-action@master
+      with:
+        args: "git@gitlab.com:hardi.kakalaw/toys_devops.git"
+      env:
+        FOLLOW_TAGS: "false"
+        FORCE_PUSH: "false"
+        GITLAB_HOSTNAME: "gitlab.com"
+        GITLAB_USERNAME: "hardi.kakalaw"
+        GITLAB_PASSWORD: "glpat-ZqC6UqwHzUkVaT9ptng4"
+        GITLAB_PROJECT_ID: "46116784" 
+        GITHUB_TOKEN: "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"
