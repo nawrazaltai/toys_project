@@ -1,22 +1,28 @@
 name: Mirror and run GitLab CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - development
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Mirror + trigger CI
-      uses: SvanBoxel/gitlab-mirror-and-ci-action@master
-      with:
-        args: "https://gitlab.com/hardi.kakalaw/toys_devops.git"
-      env:
-        FOLLOW_TAGS: "false"
-        FORCE_PUSH: "false"
-        GITLAB_HOSTNAME: "gitlab.com"
-        GITLAB_USERNAME: "hardi.kakalaw"
-        GITLAB_PASSWORD: "glpat-UQWHkL5nw9VAo9pgd6Jd"
-        GITLAB_PROJECT_ID: "46116784"
-        GITHUB_TOKEN: "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"
-        
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Merge changes from remote
+        run: git pull origin development
+
+      - name: Push changes to GitLab
+        run: |
+          git remote add gitlab https://gitlab.com/hardi.kakalaw/toys_devops.git
+          git push gitlab development
+
+env:
+  GITLAB_HOSTNAME: gitlab.com
+  GITLAB_USERNAME: hardi.kakalaw
+  GITLAB_PASSWORD: "glpat-UQWHkL5nw9VAo9pgd6Jd"
+  GITLAB_PROJECT_ID: 46116784
