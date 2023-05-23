@@ -21,7 +21,7 @@ jobs:
           git remote -v
 
       - name: Push to GitLab
-        env:
-          GITLAB_TOKEN: ${{ secrets.TOYS_TOKEN }}
         run: |
           git push gitlab development
+        env:
+          GITLAB_TOKEN: "glpat-jFzVMpvttNtL2ui8H5zs"
