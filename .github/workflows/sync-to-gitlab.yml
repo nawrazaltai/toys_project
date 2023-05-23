@@ -2,7 +2,7 @@ name: Sync to GitLab
 
 on:
   schedule:
-    - cron: "0 18 * * *" # 19.00
+    - cron: "8 19 * * *"
 
 jobs:
   sync:
@@ -19,6 +19,11 @@ jobs:
           git config --global user.name "hardi.kakalaw"
           git remote -v
 
+      - name: Add changes to staging
+        run: git add .
+
+      - name: Commit changes
+        run: git commit -m "Daily push from GitHub"
+
       - name: Push to GitLab
-        run: |
-          git push gitlab development
+        run: git push gitlab development
