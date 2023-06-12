@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@100;300;400;500;700&display=swap");
+
 .donations_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 2em 0em;
+
+  /* align-items: center; */
+}
+
+.donations_top_div {
+  margin: 3em 9.85em 2.85em 9.85em;
 }
 
 .donations_h1 {
@@ -9,52 +17,79 @@
   color: #5f3f3f;
 }
 
+.donations_text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: #5f3f3f;
+  margin-top: 2.25em;
+  margin-bottom: 3.5em;
+  font-size: 18px;
+}
+
+.donate_a_toy_btn {
+  width: 12.3em;
+  background-color: #aac9ce;
+  font-size: 1.5rem;
+  display: grid;
+  place-content: center;
+  border-radius: 28px;
+  transition: all 0.4s ease;
+}
+
+.donate_a_toy_btn:hover {
+  background-color: #e5c1cd;
+}
+
+.donate_a_toy_link {
+  text-decoration: none;
+  color: #5f3f3f;
+  width: 12.3em;
+  height: 2.5em;
+  display: grid;
+  place-content: center;
+}
+
+.vector {
+  margin-top: 3em;
+  height: 3em;
+  background-image: url("/Vector.png");
+  background-repeat: repeat;
+}
+
+.donations_titles {
+  display: flex;
+  justify-content: space-around;
+  /* gap: 4em; */
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+
+.publish_title,
+.unpublish_title {
+  font-size: 45px;
+  color: #5f3f3f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.unpublish_title {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
 .donations_div {
   overflow: none;
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 10em;
-  grid-row-gap: 3em;
-  margin-top: 2em;
-}
-
-.recent_products_container {
-  margin-top: 3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2em;
-}
-
-.recent_products_greeting {
-  font-family: "Lilita One", cursive;
-  font-size: 24px;
-  color: #5f3f3f;
-  margin-bottom: 2rem;
-}
-
-.recent_products_h2 {
-  color: #5f3f3f;
-  font-size: 2.75rem;
-  font-weight: 400;
-  margin-bottom: 1.95em;
-}
-
-.recent_three_products_div {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 5em;
-}
-
-.recent_four_products_div {
-  display: none;
+  grid-column-gap: 0em;
+  grid-row-gap: 2em;
 }
 
 .home_product_outer_border {
   border-radius: 28px;
-  width: 20.6em;
+  width: 18.6em;
   /* height: 27em; */
   padding: 0.9em 3em 2em 3em;
   border: 3px solid transparent;
@@ -72,7 +107,7 @@
 
 .home_product_article img {
   width: 100%;
-  height: 15em;
+  height: 9em;
   object-fit: cover;
   border-radius: 15px;
 }

@@ -437,7 +437,7 @@ export default function UploadDonation() {
               <input
                 className={styles.location_input}
                 type="text"
-                placeholder="Location"
+                placeholder="Add location"
                 onInput={(e) => {
                   e.target.setCustomValidity("");
                 }}

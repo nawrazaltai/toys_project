@@ -30,12 +30,27 @@ export default function Donations({ donations }) {
 
   return (
     <div className={styles.donations_container}>
-      <h1 className={styles.donations_h1}>Donations</h1>
-      {/* <div>
-        {donations.map((product) => {
-          return <div key={product.product_id}>{product.product_title}</div>;
-        })}
-      </div> */}
+      <div className={styles.donations_top_div}>
+        <h1 className={styles.donations_h1}>Donations</h1>
+        <p className={styles.donations_text}>
+          Here you can see your published donations on Rejoi.
+          <br /> You can create new donations or edit existing ones! <br />
+          <br /> Why not go ahead and publish a new donation and make someone
+          else happy ❤️
+        </p>
+        <div className={styles.donate_a_toy_btn}>
+          <Link href={"/upload"} className={styles.donate_a_toy_link}>
+            Donate a toy
+          </Link>
+        </div>
+      </div>
+      <div className={styles.vector}></div>
+
+      <div className={styles.donations_titles}>
+        <h2 className={styles.publish_title}>Published donations</h2>
+        <h2 className={styles.unpublish_title}>Unpublished donations</h2>
+      </div>
+
       <div className={styles.donations_div}>
         {donations.map((product) => {
           return (
