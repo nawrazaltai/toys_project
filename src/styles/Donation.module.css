@@ -3,7 +3,7 @@
 .donation_container {
   display: flex;
   flex-direction: column;
-  margin: 2em 20em;
+  margin: 2em 10em;
   font-family: "Lilita One";
   /* height: 100dvh; */
   /* border: 1px solid red; */
@@ -11,9 +11,9 @@
 
 .donation_title_and_donator_div {
   display: flex;
-  align-items: flex-end;
-  margin: 0em 4em;
-  /* width: 90%; */
+  /* align-items: flex-end; */
+  margin: 0em 0em;
+  width: 72em;
   justify-content: space-between;
   /* align-self: center; */
 }
@@ -22,7 +22,7 @@
   font-size: 3.8rem;
   font-weight: 400;
   color: #5f3f3f;
-  margin-bottom: -0.1em;
+  margin-bottom: 0em;
 }
 
 .donator_div {
@@ -48,9 +48,8 @@
   align-items: flex-end;
   justify-content: space-evenly;
   padding-bottom: 5.5em;
-  width: 66.75em;
+  /* width: 66.75em; */
   width: 79em;
-
   height: 38.85em;
   background: #e0cad2;
   align-self: center;
@@ -59,6 +58,20 @@
     inset -8px -4px 4px rgba(0, 0, 0, 0.4),
     inset 11px 12px 4px rgba(0, 0, 0, 0.57);
   border-radius: 68px;
+}
+
+.arrows_div {
+  position: absolute;
+  width: 75em;
+  margin-bottom: 5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow_left,
+.arrow_right {
+  font-size: 2.4rem;
+  cursor: pointer;
 }
 
 .donation_image {

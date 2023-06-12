@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "@/styles/Donation.module.css";
 import Image from "next/image";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 export default function Donation() {
   const router = useRouter();
@@ -79,6 +80,10 @@ export default function Donation() {
               />
             );
           })}
+          <div className={styles.arrows_div}>
+            <AiOutlineLeft className={styles.arrow_left}></AiOutlineLeft>
+            <AiOutlineRight className={styles.arrow_right}></AiOutlineRight>
+          </div>
         </div>
       )}
 

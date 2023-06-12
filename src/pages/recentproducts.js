@@ -6,11 +6,13 @@ import Image from "next/image";
 // import ProductCard from "./productcard";
 import { useRouter } from "next/router";
 const PORT = 3000;
+
 export default function RecentProducts() {
   const router = useRouter();
   const query = router.query; /* states, user-data from loginForm */
   console.log("QUERY :: ", query.isLoggedIn);
   const [products, setProducts] = useState([]);
+
   async function FetchProducts() {
     const response = await fetch(`http://localhost:${PORT}/api/products`, {
       //"https://planetscale-test-navy.vercel.app/api/products"
@@ -24,12 +26,16 @@ export default function RecentProducts() {
     const jsonData = await response.json();
     setProducts(jsonData.products);
   }
+
   console.log(products, "PRODUCTS");
   const topThree = products.slice(0, 3);
   const topFour = products.slice(0, 4);
+
   useEffect(() => {
     FetchProducts();
+    // setProducts(donations);
   }, []);
+
   return (
     <div className={styles.recent_products_container}>
       {query.isLoggedIn && (
@@ -65,7 +71,10 @@ export default function RecentProducts() {
                 <h4 className={styles.home_product_title}>
                   {product.product_title}
                 </h4>
-                <Link className={styles.home_product_link} href={"/"}>
+                <Link
+                  className={styles.home_product_link}
+                  href={"/donations/" + product.product_id}
+                >
                   View
                 </Link>
               </article>

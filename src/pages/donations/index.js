@@ -47,6 +47,7 @@ export default function Donations({ donations }) {
                 <Image
                   width={2000}
                   height={3000}
+                  priority
                   src={product.url}
                   alt={product.product_description}
                   // alt="Product desc"
