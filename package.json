@@ -21,7 +21,17 @@
     "react-dom": "18.2.0",
     "serverless-mysql": "^1.5.5",
     "reactjs-popup": "^2.0.5",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "uuid": "^9.0.0",
+    "uuidv4": "^6.2.13",
+    "react-transition-group": "^4.4.5",
+    "react-dropzone": "^14.2.3",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.3.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.4",
+    "cloudinary": "^1.36.4",
+    "formidable": "^2.1.1"
   },
   "devDependencies": {
     "jest": "^27.4.3",
