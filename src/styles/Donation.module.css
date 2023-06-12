@@ -49,6 +49,8 @@
   justify-content: space-evenly;
   padding-bottom: 5.5em;
   width: 66.75em;
+  width: 79em;
+
   height: 38.85em;
   background: #e0cad2;
   align-self: center;
@@ -75,10 +77,19 @@
   border-radius: 16px;
 }
 
+.donation_image_single {
+  object-fit: cover;
+  height: 16.25em;
+  width: 16.25em;
+  /* border-radius: 25px; */
+  height: 27em;
+  border-radius: 16px;
+}
+
 .desc_loc_cond_div {
   display: flex;
   flex-direction: column;
-  margin-left: 2em;
+  /* margin-left: 2em; */
   margin-top: 2.8em;
 }
 
@@ -142,10 +153,13 @@
   color: #5f3f3f;
   font-family: "Montserrat";
   font-weight: 400;
+  font-size: 1.15rem;
 }
 
 .right_condition {
   font-family: "Montserrat";
   font-weight: 700;
   color: #5f3f3f;
+  font-size: 1.15rem;
+  text-decoration: underline;
 }

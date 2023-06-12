@@ -33,6 +33,7 @@ export default function Donation() {
       const res = await response.json();
       console.log(res);
       setProduct(res.product[0]);
+      // console.log("product", res.product[0].url);
       setImages(res.images[0]);
       setCategories(res.categories[0]);
       setCondition(res.condition);
@@ -40,6 +41,10 @@ export default function Donation() {
 
     FetchProducts();
   }, [router.query.id, router.isReady]);
+
+  useEffect(() => {
+    console.log("product", product);
+  }, [product]);
 
   return (
     <div className={styles.donation_container}>
@@ -53,18 +58,29 @@ export default function Donation() {
         </div>
       </div>
 
-      <div className={styles.images_div}>
-        {images?.map((image) => {
-          return (
-            <Image
-              className={styles.donation_image}
-              src={image.image_url}
-              width={1000}
-              height={1000}
-            />
-          );
-        })}
-      </div>
+      {images.length < 2 ? (
+        <div className={styles.images_div}>
+          <Image
+            className={styles.donation_image_single}
+            src={product.url}
+            width={1000}
+            height={1000}
+          />
+        </div>
+      ) : (
+        <div className={styles.images_div}>
+          {images.map((image) => {
+            return (
+              <Image
+                className={styles.donation_image}
+                src={image.image_url}
+                width={1000}
+                height={1000}
+              />
+            );
+          })}
+        </div>
+      )}
 
       <div className={styles.desc_loc_cond_div}>
         <h3 className={styles.description_h3}>Description</h3>
