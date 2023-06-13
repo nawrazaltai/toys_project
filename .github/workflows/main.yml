@@ -1,0 +1,33 @@
+name: Push to GitLab
+
+on:
+  schedule:
+    - cron: '28 20 * * *'
+    - cron: '0 12 * * *'
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'hardi5'
+          git config --global user.email 'hardi.kakalaw@chasacademy.se'
+
+      - name: Randomize wait time
+        run: echo "::set-env name=WAIT_SECONDS::$(shuf -i 0-7200 -n 1)"
+
+      - name: Wait for random time
+        run: sleep $WAIT_SECONDS
+
+      - name: Push changes to GitLab
+        env:
+          GITLAB_REMOTE_URL: 'https://gitlab.com/hardi.kakalaw/toys_devops.git'
+          GITLAB_TOKEN: "glpat-4R5GTx6PsC3tBec5HFxF"
+        run: |
+          git remote add gitlab $GITLAB_REMOTE_URL
+          git push gitlab HEAD:development
