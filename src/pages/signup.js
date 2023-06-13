@@ -88,12 +88,15 @@ export default function Signup(props) {
   }
 
   useEffect(() => {
+    if (!username) {
+      return;
+    }
     handleUserNameAvailability();
   }, [username]);
 
   return (
     <>
-      <div onClick={onClose} className={styles.overlay}>
+      <div className={styles.overlay}>
         <main className={styles.all}>
           <button
             className={styles.closeButton}

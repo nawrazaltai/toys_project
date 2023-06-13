@@ -55,7 +55,7 @@ export default function loginForm(props) {
 
   return (
     <>
-      <div onClick={onClose} className={styles.overlay}>
+      <div className={styles.overlay}>
         <div className={styles.centerContainer}>
           <div className={styles.container}>
             <div className={styles.imageContainer}>
