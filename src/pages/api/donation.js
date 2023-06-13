@@ -28,7 +28,7 @@ export default async function handler(req, res) {
   };
   const result = await executeQuery(getProductInfo);
   // condition = result[0].product;
-  condition = result[0].product_condition;
+  condition = result[0]?.product_condition;
   //   productArr.push(result);
 
   const getProductImages = {

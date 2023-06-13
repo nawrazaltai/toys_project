@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "@/styles/Donation.module.css";
 import Image from "next/image";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import SimilarDonations from "../similarproducts";
 
 export default function Donation() {
   const router = useRouter();
@@ -37,28 +38,30 @@ export default function Donation() {
   };
 
   useEffect(() => {
-    async function FetchProducts() {
-      const apiUrl = "http://localhost:3000/api/donation/";
-      const postData = {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ id: id }),
-      };
-      const response = await fetch(apiUrl, postData);
-      const res = await response.json();
-      // console.log(res);
-      setProduct(res.product[0]);
-      // console.log("product", res.product[0].url);
-      setImages(res.images[0]);
-      setCategories(res.categories[0]);
-      setCondition(res.condition);
-    }
+    if (router.isReady) {
+      async function FetchProducts() {
+        const apiUrl = "http://localhost:3000/api/donation/";
+        const postData = {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id: id }),
+        };
+        const response = await fetch(apiUrl, postData);
+        const res = await response.json();
+        // console.log(res);
+        setProduct(res.product[0]);
+        // console.log("product", res.product[0].url);
+        setImages(res.images[0]);
+        setCategories(res.categories[0]);
+        setCondition(res.condition);
+      }
 
-    FetchProducts();
+      FetchProducts();
+    }
   }, [router.query.id, router.isReady]);
 
   // useEffect(() => {
@@ -209,6 +212,10 @@ export default function Donation() {
           </button>
         </div>
       </div>
+      <div className={styles.vector}></div>
+      <SimilarDonations productAmount={3}>
+        Similar donations that might interest you.
+      </SimilarDonations>
     </div>
   );
 }

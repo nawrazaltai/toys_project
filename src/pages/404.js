@@ -1,6 +1,9 @@
 import styles from "@/styles/NotFound.module.css";
 import Image from "next/image";
 import errorRobot from "../../public/errorRobot.png";
+import RecentProducts from "./recentproducts";
+import BrowseByCategory from "./browsebycategory";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -16,6 +19,13 @@ export default function NotFound() {
       <h2 className={styles.error_description}>
         oops, the toy lost it’s way back home.
       </h2>
+      <p className={styles.look_for_other_toys}>
+        look for other similar toys below or{" "}
+        <Link href={"/"}>Go back home</Link>
+      </p>
+      <div className={styles.vector}></div>
+      <RecentProducts />
+      <BrowseByCategory />
     </div>
   );
 }

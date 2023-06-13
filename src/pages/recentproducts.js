@@ -10,7 +10,7 @@ const PORT = 3000;
 export default function RecentProducts() {
   const router = useRouter();
   const query = router.query; /* states, user-data from loginForm */
-  console.log("QUERY :: ", query.isLoggedIn);
+  // console.log("QUERY :: ", query.isLoggedIn);
   const [products, setProducts] = useState([]);
 
   async function FetchProducts() {
@@ -27,7 +27,6 @@ export default function RecentProducts() {
     setProducts(jsonData.products);
   }
 
-  console.log(products, "PRODUCTS");
   const topThree = products.slice(0, 3);
   const topFour = products.slice(0, 4);
 
@@ -114,4 +113,3 @@ export default function RecentProducts() {
     </div>
   );
 }
-
