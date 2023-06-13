@@ -34,7 +34,7 @@ const Upper = () => {
 
         <ul className={styles.ulLinks}>
           <li className={lilitaOne.className}>
-            <Link className={styles.link} href="/home">
+            <Link className={styles.link} href="/">
               Home
             </Link>
           </li>

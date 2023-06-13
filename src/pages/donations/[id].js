@@ -12,6 +12,7 @@ export default function Donation() {
   const [categories, setCategories] = useState([]);
   const [condition, setCondition] = useState("");
   const [currentSlide, setCurrentSlide] = useState(1);
+  const [message, setMessage] = useState("");
 
   const [arr, setArr] = useState(["blue", "red", "green"]);
   let i = 0;
@@ -90,9 +91,9 @@ export default function Donation() {
       ) : (
         <div className={styles.images_div}>
           {images.map((image, idx) => {
-            let leftImage = mod(idx - 1, images.length);
-            let rightImage = mod(idx + 1, images.length);
-            let classNames = "";
+            // let leftImage = mod(idx - 1, images.length);
+            // let rightImage = mod(idx + 1, images.length);
+            // let classNames = "";
 
             // if (idx == currentSlide) {
             //   classNames = "styles.current_image";
@@ -173,6 +174,39 @@ export default function Donation() {
               );
             })}
           </ul>
+        </div>
+
+        <div className={styles.message_div}>
+          <h2 className={styles.message_title}>Message</h2>
+
+          <textarea
+            required
+            onInvalid={(e) => {
+              e.target.setCustomValidity(
+                "A description for your donation is required"
+              );
+            }}
+            onInput={(e) => {
+              e.target.setCustomValidity("");
+            }}
+            maxLength={"600"}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            placeholder="Send your message to the donator!"
+            className={styles.message_textarea}
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button
+            className={
+              message.length == 0 ? styles.inactive_send_btn : styles.send_btn
+            }
+          >
+            <span className={styles.send_btn_text}>Send</span>{" "}
+          </button>
         </div>
       </div>
     </div>
