@@ -4,6 +4,8 @@ import styles from "./nbar.module.css";
 import { Lilita_One } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import { useState } from "react";
+import Image from "next/image";
+import logo from "../../../public/NavbarLogo.png";
 
 const montserrat = Montserrat({ weight: "200", subsets: ["latin"] });
 const lilitaOne = Lilita_One({ weight: "400", subsets: ["latin"] });
@@ -14,7 +16,8 @@ const Upper = () => {
   return (
     <div className={styles.test}>
       <div className={styles.description}>
-        <img className={styles.logoupper} src="./NavbarLogo.png" alt="Logo" />
+        {/* <img className={styles.logoupper} src="./NavbarLogo.png" alt="Logo" /> */}
+        <Image src={logo} width={180} height={100} alt="logo" />
         <div>
           <div>
             <AiOutlineSearch
