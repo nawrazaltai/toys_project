@@ -13,8 +13,7 @@
 .donation_title_and_donator_div {
   display: flex;
   /* align-items: flex-end; */
-  /* margin: 0em 5em; */
-  width: 70em;
+  width: 76em;
   justify-content: space-between;
   /* align-self: center; */
 }
@@ -96,8 +95,9 @@
 .desc_loc_cond_div {
   display: flex;
   flex-direction: column;
-  margin-left: -14em;
+  margin-left: 2em;
   margin-top: 2.8em;
+  width: 79em;
 }
 
 .description_h3 {
@@ -109,7 +109,7 @@
 
 .description {
   font-family: "Montserrat";
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 400;
   line-height: 20px;
   color: #5f3f3f;
@@ -187,4 +187,56 @@
   width: 13.25em;
   border-radius: 25px;
   transition: all ease 0.4s;
+}
+
+.message_div {
+  margin-top: 2.75em;
+  width: 100%;
+}
+
+.message_title {
+  color: #5f3f3f;
+  font-size: 2.85rem;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.message_textarea {
+  background-color: #ddd0d0;
+  color: #5f3f3f;
+  border: none;
+  border-radius: 10px;
+  width: 98%;
+  height: 15.85em;
+  padding: 0.85em;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 400;
+  resize: none;
+}
+
+.message_textarea::placeholder {
+  color: #5f3f3f;
+}
+
+.send_btn,
+.inactive_send_btn {
+  border: none;
+  background-color: #aac9ce;
+  width: 9.75em;
+  height: 4em;
+  border-radius: 28.75px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+.inactive_send_btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.send_btn_text {
+  color: #5f3f3f;
+  font-size: 1.7rem;
+  font-weight: 400;
 }
