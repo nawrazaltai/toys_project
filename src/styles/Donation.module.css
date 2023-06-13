@@ -48,6 +48,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
+  /* justify-content: center; */
   padding-bottom: 5.5em;
   /* width: 66.75em; */
   width: 79em;
@@ -80,15 +81,7 @@
   height: 13.25em;
   width: 13.25em;
   border-radius: 25px;
-}
-
-.donation_image:nth-child(2) {
-  object-fit: cover;
-  height: 16.25em;
-  width: 16.25em;
-  /* border-radius: 25px; */
-  height: 27em;
-  border-radius: 16px;
+  position: absolute;
 }
 
 .donation_image_single {
@@ -176,4 +169,22 @@
   color: #5f3f3f;
   font-size: 1.15rem;
   text-decoration: underline;
+}
+
+.current_image {
+  object-fit: cover;
+  height: 16.25em;
+  width: 16.25em;
+  /* border-radius: 25px; */
+  height: 27em;
+  border-radius: 16px;
+  transition: all ease 0.4s;
+}
+
+.inactive_image {
+  object-fit: cover;
+  height: 13.25em;
+  width: 13.25em;
+  border-radius: 25px;
+  transition: all ease 0.4s;
 }

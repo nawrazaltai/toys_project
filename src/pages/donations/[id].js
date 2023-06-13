@@ -11,12 +11,29 @@ export default function Donation() {
   const [images, setImages] = useState([]);
   const [categories, setCategories] = useState([]);
   const [condition, setCondition] = useState("");
+  const [currentSlide, setCurrentSlide] = useState(1);
+
+  const [arr, setArr] = useState(["blue", "red", "green"]);
+  let i = 0;
+
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
+    // setCurrentSlide((currentSlide + 1) % images.length);
+  };
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
+  };
 
   const conditionsArray = [
     { id: 1, condition: "Poor" },
     { id: 2, condition: "Good" },
     { id: 3, condition: "New" },
   ];
+
+  const mod = (n, m) => {
+    let result = n % m;
+    return result >= 0 ? result : result + m;
+  };
 
   useEffect(() => {
     async function FetchProducts() {
@@ -32,7 +49,7 @@ export default function Donation() {
       };
       const response = await fetch(apiUrl, postData);
       const res = await response.json();
-      console.log(res);
+      // console.log(res);
       setProduct(res.product[0]);
       // console.log("product", res.product[0].url);
       setImages(res.images[0]);
@@ -43,9 +60,11 @@ export default function Donation() {
     FetchProducts();
   }, [router.query.id, router.isReady]);
 
-  useEffect(() => {
-    console.log("product", product);
-  }, [product]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setCurrentSlide((currentSlide + 1) % images.length);
+  //   }, 1000);
+  // }, [currentSlide]);
 
   return (
     <div className={styles.donation_container}>
@@ -70,19 +89,60 @@ export default function Donation() {
         </div>
       ) : (
         <div className={styles.images_div}>
-          {images.map((image) => {
+          {images.map((image, idx) => {
+            let leftImage = mod(idx - 1, images.length);
+            let rightImage = mod(idx + 1, images.length);
+            let classNames = "";
+
+            // if (idx == currentSlide) {
+            //   classNames = "styles.current_image";
+            // } else {
+            //   classNames = "inactive_image";
+            // }
+
             return (
               <Image
-                className={styles.donation_image}
+                className={
+                  currentSlide == idx
+                    ? styles.current_image
+                    : styles.inactive_image
+                }
                 src={image.image_url}
                 width={1000}
                 height={1000}
+                alt="product"
+                key={idx}
               />
             );
+
+            // return (
+            //   <Image
+            //     className={
+            //       idx == currentSlide
+            //         ? styles.current_image
+            //         : idx == leftImage
+            //         ? styles.inactive_image_left
+            //         : idx == rightImage
+            //         ? styles.inactive_image_right
+            //         : ""
+            //     }
+            //     src={image.image_url}
+            //     width={1000}
+            //     height={1000}
+            //     alt="product"
+            //     key={idx}
+            //   />
+            // );
           })}
           <div className={styles.arrows_div}>
-            <AiOutlineLeft className={styles.arrow_left}></AiOutlineLeft>
-            <AiOutlineRight className={styles.arrow_right}></AiOutlineRight>
+            <AiOutlineLeft
+              onClick={prevSlide}
+              className={styles.arrow_left}
+            ></AiOutlineLeft>
+            <AiOutlineRight
+              onClick={nextSlide}
+              className={styles.arrow_right}
+            ></AiOutlineRight>
           </div>
         </div>
       )}
