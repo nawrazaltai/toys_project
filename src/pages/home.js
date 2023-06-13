@@ -7,76 +7,73 @@ import { AiOutlineSearch } from "react-icons/ai";
 const lilitaOne = Lilita_One({ weight: "400", subsets: ["latin"] });
 const montserrat = Montserrat({ weight: "200", subsets: ["latin"] });
 import BrowseByCategory from "./browsebycategory";
+import Link from "next/link";
 
+export default function HomeTest() {
+  const [products, setProducts] = useState([]);
 
+  async function FetchProducts() {
+    const response = await fetch("http://localhost:3000/api/products", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+    const jsonData = await response.json();
+    setProducts(jsonData.products);
+  }
 
+  useEffect(() => {
+    FetchProducts();
+  }, []);
+  console.log(products);
+  return (
+    <div>
+      <div className={styles.box}>
+        <h3 className={`${styles.welcometext} ${montserrat.className}`}>
+          Welcome ... to Rejoi!
+        </h3>
 
-export default function HomeTest(){
-
-const [products, setProducts] = useState([]);
-
-async function FetchProducts() {
-  const response = await fetch("http://localhost:3000/api/products", {
-    method: "GET",
-    mode: "cors",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  });
-  const jsonData = await response.json();
-  setProducts(jsonData.products)};
-
-useEffect(() => {
-  FetchProducts();
-}, []);
-console.log(products)
-    return (
-      <div>
-        <div className={styles.box}>
-          <h3 className={`${styles.welcometext} ${montserrat.className}`}>
-            Welcome ... to Rejoi!
-          </h3>
-
+        <div>
           <div>
+            <AiOutlineSearch
+              className={styles.iconsearch}
+              color="#5f3f3f"
+              size={23}
+            />
             <div>
-              <AiOutlineSearch
-                className={styles.iconsearch}
-                color="#5f3f3f"
-                size={23}
+              <input
+                type="Search"
+                placeholder="What are you looking for today?"
+                className={`${styles.searchbar} ${montserrat.className}`}
               />
-              <div>
-                <input
-                  type="Search"
-                  placeholder="What are you looking for today?"
-                  className={`${styles.searchbar} ${montserrat.className}`}
-                />
-              </div>
             </div>
           </div>
-
-          <h1 className={`${styles.text} ${lilitaOne.className}`}>
-            Most recently published donations
-          </h1>
-        </div>
-        <div className={styles.importing}>
-          {products.slice(0,6).map((product) => {
-            return (
-              <div>
-                <FirstCard product={product} />
-              </div>
-            );
-          })}
         </div>
 
-
-  <div className={styles.bear}>
-          </div>
-<BrowseByCategory />
-
+        <h1 className={`${styles.text} ${lilitaOne.className}`}>
+          Most recently published donations
+        </h1>
       </div>
-    );
+      <div className={styles.importing}>
+        {products.slice(0, 6).map((product) => {
+          return (
+            <div>
+              <Link
+                className={styles.product_link}
+                href={"/donations/" + product.product_id}
+              >
+                <FirstCard product={product} />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
 
+      <div className={styles.bear}></div>
+      <BrowseByCategory />
+    </div>
+  );
 }
-
-
