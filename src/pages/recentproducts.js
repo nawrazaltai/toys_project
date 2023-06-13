@@ -9,10 +9,10 @@ const PORT = 3000;
 export default function RecentProducts() {
     const router = useRouter();
     const query = router.query; /* states, user-data from loginForm */
-    console.log("QUERY :: ", query.isLoggedIn)
+    console.log("QUERY :: ", query.isLoggedIn);
     const [products, setProducts] = useState([]);
     async function FetchProducts() {
-        const response = await fetch("http://localhost:${PORT}/api/products", {
+        const response = await fetch(`http://localhost:${PORT}/api/products`, {
             //"https://planetscale-test-navy.vercel.app/api/products"
             method: "GET",
             mode: "cors",
@@ -32,11 +32,11 @@ export default function RecentProducts() {
     }, []);
     return (
         <div className={styles.recent_products_container}>
-            {query.isLoggedIn &&
+            {query.isLoggedIn && (
                 <div className={styles.recent_products_greeting}>
                     <p>Welcome {query.username} to Rejoy!</p>
                 </div>
-            }
+            )}
             <div className={styles.recent_products_title_div}>
                 <h2 className={styles.recent_products_h2}>
                     Most recently published donations

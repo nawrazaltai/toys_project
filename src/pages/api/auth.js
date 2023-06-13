@@ -11,9 +11,7 @@ export default function auth(req, res) {
         console.log("USSEEER TOken: ", token);
         jwt.verify(token, SECRET, (err) => {
             if (err) {
-                response.push(
-                    res.json({ error: "Session-token is not valid." })
-                );
+                response.push(res.json({ error: "Session-token is invalid." }));
             } else {
                 response.push(res.json({ message: "ok" }));
             }

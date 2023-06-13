@@ -29,7 +29,7 @@ export default function TESTprofile() {
 
     return (
         <div>
-            <h1>hello TEST PROFILE: {query.username}</h1>
+            <h1>hello TEST: {query.username}</h1>
             <h3>token: {query.token}</h3>
             <h3>username: {query.username}</h3>
             <h3>

@@ -17,33 +17,25 @@ export default async function login(req, res) {
 
         // if nothing comes from query
         if (result.length === 0) {
-            return response.push(
-                res.status(403).json({
-                    message: "Email or password is invalid"
-                })
-            );
-      
+            res.status(403).json({
+                message: "Email or password is invalid",
+            });
         } else if (userDb.password === userClient.password) {
-            console.log(userDb.user_id, userDb.username, userDb)
             // create jwt token
             const token = jwt.sign(userDb.user_id, SECRET);
-       
-                res.status(200).json({
-                    userId: userDb.user_id,
-                    username: userDb.username,
-                    firstName: userDb.first_name,
-                    lastName: userDb.last_name,
-                    token: token, 
-                    isLoggedIn: true
-                })                      
-        } else {
-            return response.push(
-                res.status(403).json({
-                    message: "Email or password is invalid"
-                })
-            );
-        }
 
-        
+            res.json({
+                userId: userDb.user_id,
+                username: userDb.username,
+                firstName: userDb.first_name,
+                lastName: userDb.last_name,
+                token: token,
+                isLoggedIn: true,
+            });
+        } else {
+            res.status(403).json({
+                message: "Email or password is invalid",
+            });
+        }
     }
 }

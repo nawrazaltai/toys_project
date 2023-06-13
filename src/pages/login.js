@@ -10,7 +10,7 @@ const url = `http://localhost:${PORT}/api/login`;
 
 export default function login() {
   const router = useRouter();
-  const href = "/TESTprofile";
+  const href = "/testpage";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

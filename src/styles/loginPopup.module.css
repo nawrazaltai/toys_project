@@ -13,282 +13,288 @@ COLORS
 */
 
 .blackBox {
-    /* box in corner for development! */
-    border: 2px solid black;
-    color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  /* box in corner for development! */
+  border: 2px solid black;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .closeButton {
-    position: absolute;
-    width: 20px;
-    color: #000000;
-    background-color: #FFFFFF;
-    border: none;
-    top: 1.5em;
-    right: 3em;
-    font-size: xx-large;
-    font-weight: 600;
-    color: #5F3F3F;
+  position: absolute;
+  width: 20px;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  margin-right: 2rem;
+  top: 10%;
+  right: 7%;
+  font-size: xx-large;
+  font-weight: 600;
+  color: #5f3f3f;
 }
 .closeButton:hover {
-    cursor: pointer;
-    color: #BA9F9F;
+  cursor: pointer;
+  color: #ba9f9f;
 }
 
 .text {
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    color: #5f3f3f;
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #5f3f3f;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 .textOr {
-    margin-top: 1rem;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    color: #5f3f3f;
-    font-size: 1.75rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #5f3f3f;
+  font-size: 1.75rem;
 }
 
 .overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    top: 0;
-    background-color: #DBDBDB;
-    opacity: 0.7;
-  }
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  background-color: rgba(215, 215, 215, 0.5);
+}
 
 .centerContainer {
-    position: absolute;
-    margin-bottom: 0;
-    width: 100%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  z-index: 9;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
 }
 
 .container {
-    min-height: 20rem;
-    opacity: 0.9;
-    background-color: rgb(255, 255, 255);
-    border-radius: 100px;
-    text-decoration: none;
-    font-family: "Lilita One", cursive;
-    color: black;
-    height: 90%;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 10;
+  min-height: 20rem;
+  opacity: 1;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: "Lilita One", cursive;
+  color: black;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
 .imageContainer {
-    text-align: center;
-    margin-right: 4rem;
+  text-align: center;
+  margin-right: 4rem;
 }
 .image {
-    width: 400px;
+  width: 400px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 18rem;
-    font-size: 1.75rem;
-    font-weight: 400;
-    font-family: "Montserrat", sans-serif;
-    color: #5f3f3f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 18rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #5f3f3f;
 }
 
 .login {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .input {
-    margin: 0;
-    height: 2rem;
-    border-radius: 4px;
-    background-color: white;
-    border: 1.5px solid #aac9ce;
-    padding-left: 0.5rem;
-    color: black;
+  margin: 0;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: white;
+  border: 1.5px solid #aac9ce;
+  padding-left: 0.5rem;
+  color: black;
 }
 
 .input::placeholder {
-    color: gray;
-    font-family: "Montserrat", sans-serif;
+  color: gray;
+  font-family: "Montserrat", sans-serif;
 }
 
 .buttons {
-    text-align: left;
-    margin-top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  text-align: left;
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .buttonSignIn {
-    border: none;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    height: 1.5em;
-    border-radius: 50px;
-    background-color: #aac9ce;
-    font-family: "Lilita One";
-    font-weight: 400;
-    font-size: 1.5rem;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-    transition: 0.3s ease-out;
-    color: #5f3f3f;
+  border: none;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 1.5em;
+  border-radius: 50px;
+  background-color: #aac9ce;
+  font-family: "Lilita One";
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  color: #5f3f3f;
 }
 
 .buttonSignUp {
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    width: 100%;
-    height: 1.5em;
-    border: 1px solid #aac9ce;
-    border-radius: 50px;
-    background-color: #ffffff;
-    font-family: "Lilita One";
-    font-weight: 400;
-    font-size: 1.5rem;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-    transition: 0.3s ease-out;
-    color: #5f3f3f;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  width: 100%;
+  height: 1.5em;
+  border: 1px solid #aac9ce;
+  border-radius: 50px;
+  background-color: #ffffff;
+  font-family: "Lilita One";
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  color: #5f3f3f;
 }
 
 .link {
-    color: #5f3f3f;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+  color: #5f3f3f;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .buttonSignUp:hover {
-    outline: 1.5px solid #aac9ce;
-    background-color: white;
-    cursor: pointer;
+  outline: 1.5px solid #aac9ce;
+  background-color: white;
+  cursor: pointer;
 }
 
 .buttonSignIn:hover {
-    background-color: #f0dbe2;
-    cursor: pointer;
+  background-color: #f0dbe2;
+  cursor: pointer;
 }
 
 .error {
-    text-align: center;
-    color: red;
-    font-family: "Lilita One", cursive;
-    font-size: 1rem;
-    position: relative;
-    min-width: 10rem;
-    top: -5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  color: red;
+  font-family: "Lilita One", cursive;
+  font-size: 1rem;
+  position: relative;
+  min-width: 10rem;
+  top: -5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 /* tablet */
 @media screen and (max-width: 1080px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .closeButton {
+    top: 10%;
+    right: 8%;
+  }
 
-    .imageContainer {
-        width: 300px;
-        margin: 0;
-        margin-right: 5rem;
-    }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+  }
+
+  .imageContainer {
+    width: 300px;
+    margin: 0;
+    margin-right: 5rem;
+  }
 }
 
 /* mobile */
 @media screen and (max-width: 770px) {
-    .closeButton {
-        position: absolute;
-        width: 20px;
-        color: #000000;
-        background-color: #FFFFFF;
-        border: none;
-        top: 1em;
-        right: 1em;
-        font-size: xx-large;
-        font-weight: 600;
-        color: #5F3F3F;
-    }
-    .closeButton:hover {
-        cursor: pointer;
-        color: #BA9F9F;
-    }
-    .imageContainer {
-        margin: 0;
-        margin-top: 4rem;
-        margin-bottom: 0;
-    }
-    .image {
-        width: 250px;
-    }
-    
-    .container { 
-        border-radius: 50px;
-        flex-direction: column;
-        width: 90%;
-        height: 90%;
-    }
+  .closeButton {
+    position: absolute;
+    width: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    top: 10%;
+    right: 10%;
+    font-size: xx-large;
+    font-weight: 600;
+    color: #5f3f3f;
+  }
+  .closeButton:hover {
+    cursor: pointer;
+    color: #ba9f9f;
+  }
+  .imageContainer {
+    margin: 0;
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+  .image {
+    width: 250px;
+  }
 
-    .input {
-        width: 100%;
-    }
+  .container {
+    border-radius: 25px;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+  }
 
-    .form {
-        margin: 2rem;
-        width: 90%;
-    }
+  .input {
+    width: 100%;
+  }
 
-    .login {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
+  .form {
+    margin: 2rem;
+    width: 90%;
+  }
 
-    .buttons {
-        margin-top: 1rem;
-        flex-direction: row;
-        justify-content: center;
-    }
+  .login {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-    .buttonSignIn {
-        margin-bottom: 0;
-        margin-top: 0;
-        margin-right: 2rem;
-        width: 40%;
-    }
-    .buttonSignUp {
-        margin-top: 0;
-        margin-bottom: 0;
-        width: 40%;
-    }
+  .buttons {
+    margin-top: 1rem;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-    .textOr {
-        display: none;
-    }
+  .buttonSignIn {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 2rem;
+    width: 40%;
+  }
+  .buttonSignUp {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 40%;
+  }
+
+  .textOr {
+    display: none;
+  }
 }
