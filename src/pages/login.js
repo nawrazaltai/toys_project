@@ -6,7 +6,8 @@ import Link from "next/link";
 import styles from "../styles/login.module.css";
 
 const PORT = 3000;
-const url = `http://localhost:${PORT}/api/login`;
+// const url = `http://localhost:${PORT}/api/login`;
+const url = "https://planetscale-test-navy.vercel.app/api/login";
 
 export default function login() {
   const router = useRouter();
