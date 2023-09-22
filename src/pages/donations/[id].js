@@ -40,7 +40,8 @@ export default function Donation() {
   useEffect(() => {
     if (router.isReady) {
       async function FetchProducts() {
-        const apiUrl = "https://planetscale-test-navy.vercel.app/api/products";
+        const apiUrl =
+          "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/products";
         const postData = {
           method: "POST",
           mode: "cors",
