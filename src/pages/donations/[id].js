@@ -62,7 +62,7 @@ export default function Donation() {
 
       FetchProducts();
     }
-  }, [router.query.id, router.isReady, id]);
+  }, [router.query.id, router.isReady]);
 
   // useEffect(() => {
   //   setTimeout(() => {
