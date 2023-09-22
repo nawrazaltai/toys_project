@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap");
+
+.notFound_container {
+  display: flex;
+  flex-direction: column;
+  /* height: 100dvh; */
+  align-items: center;
+}
+
+.error_title {
+  font-size: 3.8rem;
+  color: #5f3f3f;
+  margin-top: 1.6em;
+}
+
+.error_picture {
+  width: 38.25em;
+  height: 25.45em;
+  margin-top: 3.6em;
+}
+
+.error_description {
+  color: #5f3f3f;
+  margin-top: 2.75em;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.look_for_other_toys {
+  color: #5f3f3f;
+  margin-top: 1.9em;
+  font-size: 1.93rem;
+  font-weight: 400;
+  margin-bottom: 2.5em;
+}
+
+.vector {
+  margin-bottom: 4em;
+  height: 3em;
+  width: 100%;
+  background-image: url("/Vector.png");
+  background-repeat: repeat;
+}

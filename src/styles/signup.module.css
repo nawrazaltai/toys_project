@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&display=swap");
+@media (min-width: 1023px) {
+  /* For desktop: */
+  .closeButton {
+    position: absolute;
+    width: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    top: 8%;
+    right: 7%;
+    font-size: xx-large;
+    font-weight: 600;
+    color: #5f3f3f;
+  }
+  .closeButton:hover {
+    cursor: pointer;
+    color: #ba9f9f;
+  }
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    background-color: #dbdbdb;
+    background-color: rgba(215, 215, 215, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .all {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 90%;
+    height: 90%;
+    border-radius: 100px;
+    z-index: 10;
+  }
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5em;
+    margin-top: 8em;
+  }
+  .logo {
+    display: flex;
+    width: 25em;
+    height: 25em;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 4em;
+  }
+  .signUp {
+    display: flex;
+    flex-direction: column;
+    height: 30em;
+  }
+  .textH2 {
+    font-family: "Lilita One";
+    font-style: normal;
+    font-weight: 400;
+    color: #5f3f3f;
+  }
+  .textP {
+    font-family: "Lilita One";
+    font-style: normal;
+    color: #5f3f3f;
+  }
+  .username {
+    border-radius: 6px;
+    height: 30px;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .fLName {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    gap: 1em;
+  }
+  .fName {
+    border-radius: 6px;
+    height: 30px;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .lName {
+    border-radius: 6px;
+    height: 30px;
+    width: 200px;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .boxTerms {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .terms {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22.6451px;
+    line-height: 28px;
+    color: #000000;
+  }
+  .checkbox {
+    box-sizing: border-box;
+    width: 1.5em;
+    margin-left: 2em;
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+  .checkbox:hover {
+    cursor: pointer;
+  }
+  .errorMessage {
+    color: red;
+    padding: 0.5em 0 0 0;
+    align-self: center;
+    font-size: small;
+    font-style: normal;
+  }
+  .button1 {
+    width: 320.21px;
+    height: 39.4px;
+    margin-left: 2.5em;
+    background: #aac9ce;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+    cursor: pointer;
+  }
+  .button1:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+  .disabled {
+    width: 320.21px;
+    height: 39.4px;
+    margin-left: 2.5em;
+    background: #aac9ce;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  .text1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22.6451px;
+    line-height: 28px;
+    margin-left: 1.5em;
+    color: #000000;
+  }
+  .button2 {
+    width: 320.21px;
+    height: 39.4px;
+    margin-left: 2.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+  }
+  .button2:hover {
+    cursor: pointer;
+    background-color: #aac9ce;
+  }
+  .buttonText {
+    font-family: "Lilita One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24.0022px;
+    line-height: 27px;
+    color: #5f3f3f;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* For tablets: */
+  .closeButton {
+    position: absolute;
+    width: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    font-size: xx-large;
+    color: #5f3f3f;
+    right: 5%;
+    top: 5%;
+  }
+  .closeButton:hover {
+    cursor: pointer;
+    color: #ba9f9f;
+  }
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    background-color: rgba(215, 215, 215, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .all {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+    min-height: 40rem;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 7em;
+    z-index: 10;
+  }
+  .logo {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .textH2 {
+    font-family: "Lilita One";
+    font-style: normal;
+    font-weight: 400;
+    color: #5f3f3f;
+    align-self: center;
+    padding-bottom: 0.5em;
+  }
+  .textP {
+    display: none;
+  }
+  .username {
+    display: flex;
+    border-radius: 6px;
+    width: 260px;
+    height: 30px;
+    margin-left: 2em;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .fLName {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+  }
+  .fName {
+    border-radius: 6px;
+    width: 125px;
+    height: 30px;
+    margin-left: 2em;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .lName {
+    border-radius: 6px;
+    width: 125px;
+    height: 30px;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .button1 {
+    width: 50%;
+    height: 30px;
+    margin-left: 1em;
+    background: #aac9ce;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+  }
+  .button1:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+  .disabled {
+    width: 299.21px;
+    height: 30px;
+    margin-left: 1em;
+    background: #aac9ce;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  .boxTerms {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .terms {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+  }
+  .checkbox {
+    box-sizing: border-box;
+    width: 1.5em;
+    margin-left: 2.5em;
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+  .checkbox:hover {
+    cursor: pointer;
+  }
+  .errorMessage {
+    color: red;
+    padding: 0.5em 0 0 0;
+    font-size: small;
+    font-style: normal;
+    padding-left: 1em;
+  }
+  .text1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-left: 4em;
+    color: #000000;
+  }
+  .button2 {
+    width: 299.21px;
+    height: 30px;
+    margin-left: 1em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+  }
+  .button2:hover {
+    cursor: pointer;
+    background-color: #aac9ce;
+  }
+  .buttonText {
+    font-family: "Lilita One";
+    font-style: normal;
+    font-weight: 400;
+    color: #5f3f3f;
+  }
+}
+@media (max-width: 770px) {
+  /* For Mobile: */
+  .closeButton {
+    position: absolute;
+    width: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    font-size: xx-large;
+    color: #5f3f3f;
+    right: 0.5em;
+    top: 0.25em;
+  }
+  .closeButton:hover {
+    cursor: pointer;
+    color: #ba9f9f;
+  }
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    background-color: rgba(215, 215, 215, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .all {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+    min-height: 40rem;
+    border-radius: 25px;
+    padding: 7em;
+    z-index: 10;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .textH2 {
+    font-family: "Lilita One";
+    font-style: normal;
+    font-weight: 400;
+    color: #5f3f3f;
+    align-self: center;
+    padding-bottom: 0.5em;
+  }
+  .textP {
+    display: none;
+  }
+  .username {
+    display: flex;
+    border-radius: 6px;
+    width: 260px;
+    height: 30px;
+    margin-left: 2em;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .fLName {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+  }
+  .fName {
+    border-radius: 6px;
+    width: 125px;
+    height: 30px;
+    margin-left: 2em;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .lName {
+    border-radius: 6px;
+    width: 125px;
+    height: 30px;
+    padding-left: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+  }
+  .button1 {
+    width: 299.21px;
+    height: 30px;
+    margin-left: 1em;
+    background: #aac9ce;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+  }
+  .button1:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+  .disabled {
+    width: 299.21px;
+    height: 30px;
+    margin-left: 1em;
+    background: #aac9ce;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  .boxTerms {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .terms {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+  }
+  .checkbox {
+    box-sizing: border-box;
+    width: 1.5em;
+    margin-left: 2.5em;
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+  .checkbox:hover {
+    cursor: pointer;
+  }
+  .errorMessage {
+    color: red;
+    padding: 0.5em 0 0 0;
+    font-size: small;
+    font-style: normal;
+    padding-left: 1em;
+  }
+  .text1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-left: 4em;
+    color: #000000;
+  }
+  .button2 {
+    width: 299.21px;
+    height: 30px;
+    margin-left: 1em;
+    background: #ffffff;
+    border: 1px solid #aac9ce;
+    border-radius: 28.7495px;
+  }
+  .button2:hover {
+    cursor: pointer;
+    background-color: #aac9ce;
+  }
+  .buttonText {
+    font-family: "Lilita One";
+    font-style: normal;
+    font-weight: 400;
+    color: #5f3f3f;
+  }
+}
