@@ -8,7 +8,7 @@ const FirstCard = ({ product }) => {
   return (
     <div className={styles.imgContainer}>
       <Image
-        src={product.url}
+        src={product?.url}
         width={500}
         height={500}
         alt="robot"
