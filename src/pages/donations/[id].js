@@ -40,7 +40,7 @@ export default function Donation() {
   useEffect(() => {
     if (router.isReady) {
       async function FetchProducts() {
-        const apiUrl = "https://toys-project.vercel.app/api/products";
+        const apiUrl = "https://toys-project.vercel.app/api/donation";
         const postData = {
           method: "POST",
           mode: "cors",
@@ -51,6 +51,7 @@ export default function Donation() {
           body: JSON.stringify({ id: id }),
         };
         const response = await fetch(apiUrl, postData);
+        console.log(response);
         const res = await response.json();
         // console.log(res);
         setProduct(res.product[0]);
