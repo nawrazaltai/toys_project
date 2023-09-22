@@ -10,6 +10,7 @@ import Signup from "./signup";
 import LoginForm from "./loginForm";
 import LoginPopup from "./loginpopup";
 
+const url = "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/users";
 export default function Home() {
   const [showSignup, setShowSignup] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -40,7 +41,7 @@ export default function Home() {
       password: password,
       email: email,
     };
-    fetch("http://localhost:3001/api/users", {
+    fetch(url, {
       method: "POST",
       mode: "cors",
       headers: {

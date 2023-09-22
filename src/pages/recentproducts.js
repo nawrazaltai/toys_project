@@ -6,7 +6,8 @@ import Image from "next/image";
 // import ProductCard from "./productcard";
 import { useRouter } from "next/router";
 const PORT = 3000;
-
+const url =
+  "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/products";
 export default function RecentProducts() {
   const router = useRouter();
   const query = router.query; /* states, user-data from loginForm */
@@ -14,7 +15,7 @@ export default function RecentProducts() {
   const [products, setProducts] = useState([]);
 
   async function FetchProducts() {
-    const response = await fetch(`http://localhost:${PORT}/api/products`, {
+    const response = await fetch(url, {
       //"https://planetscale-test-navy.vercel.app/api/products"
       method: "GET",
       mode: "cors",

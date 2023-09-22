@@ -14,7 +14,7 @@ export default function HomeTest() {
 
   async function FetchProducts() {
     const response = await fetch(
-      "https://planetscale-test-navy.vercel.app/api/products",
+      "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/products",
       {
         method: "GET",
         mode: "cors",

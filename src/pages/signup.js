@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/signup.module.css";
 
 const PORT = 3000;
+const url = "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/users";
 
 export default function Signup(props) {
   const { onClose, switchToLogin } = props;
@@ -36,7 +37,7 @@ export default function Signup(props) {
       password: password,
     };
     console.log("user: ", user);
-    fetch(`https://planetscale-test-navy.vercel.app/api/users`, {
+    fetch(url, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -59,17 +60,20 @@ export default function Signup(props) {
     const user = {
       username,
     };
-    fetch("https://planetscale-test-navy.vercel.app/api/usersAvailable", {
-      // https://planetscale-test-navy.vercel.app/api/usersAvailable
-      // http://localhost:3000/api/usersAvailable
-      method: "POST",
-      mode: "cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
+    fetch(
+      "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/usersAvailable",
+      {
+        // https://planetscale-test-navy.vercel.app/api/usersAvailable
+        // http://localhost:3000/api/usersAvailable
+        method: "POST",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    )
       .then((response) => response.json())
       .then(
         (data) => {

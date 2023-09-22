@@ -15,7 +15,7 @@ const FirstCard = ({ product }) => {
         className={styles.img}
       />
       <div className={`${styles.cardtext} ${lilitaOne.className}`}>
-        {product.product_title}
+        {product?.product_title}
       </div>
       <button className={`${styles.buttonstyle} ${lilitaOne.className}`}>
         View

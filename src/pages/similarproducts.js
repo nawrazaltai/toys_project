@@ -7,6 +7,8 @@ import { useRouter } from "next/router";
 import styles from "@/styles/SimilarDonations.module.css";
 
 const PORT = 3000;
+const url =
+  "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/products";
 export default function SimilarDonations(props) {
   const router = useRouter();
   const { id } = router.query;
@@ -16,18 +18,15 @@ export default function SimilarDonations(props) {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   async function FetchProducts() {
-    const response = await fetch(
-      `https://planetscale-test-navy.vercel.app/api/products`,
-      {
-        //"https://planetscale-test-navy.vercel.app/api/products"
-        method: "GET",
-        mode: "cors",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(url, {
+      //"https://planetscale-test-navy.vercel.app/api/products"
+      method: "GET",
+      mode: "cors",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
     const jsonData = await response.json();
     setAllProducts(jsonData.products);
   }

@@ -127,17 +127,20 @@ export default function UploadDonation() {
       thumbnail: thumbnail,
       // category: category,
     };
-    const data = await fetch("http://localhost:3000/api/products", {
-      // http://localhost:3000/api/uploadimage
-      // "https://planetscale-test-navy.vercel.app/api/uploadimage"
-      method: "POST",
-      mode: "cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    }).then((res) => res.json());
+    const data = await fetch(
+      "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/uploadimage",
+      {
+        // http://localhost:3000/api/uploadimage
+        // "https://planetscale-test-navy.vercel.app/api/uploadimage"
+        method: "POST",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    ).then((res) => res.json());
     // console.log(data);
     setProductId(data.product.insertId);
     // insertImages(e);
