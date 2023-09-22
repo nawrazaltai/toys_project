@@ -15,6 +15,7 @@ const nextConfig = {
       "localhost",
       "planetscale-test-navy.vercel.app/",
       "toys-project.vercel.app/",
+      "toys-project-od36ed0cv-nawrazaltai.vercel.app/api/products",
     ],
     formats: ["image/webp"],
   },
