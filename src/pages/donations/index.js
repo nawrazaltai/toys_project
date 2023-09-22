@@ -4,29 +4,48 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export const getStaticProps = async () => {
-  const response = await fetch("https://toys-project.vercel.app/api/products", {
-    // "https://planetscale-test-navy.vercel.app/api/products"
-    // "http://localhost:3000/api/products"
-    method: "GET",
-    mode: "cors",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  });
-  const jsonData = await response.json();
+// export const getStaticProps = async () => {
+//   const response = await fetch("https://toys-project.vercel.app/api/products", {
+//     // "https://planetscale-test-navy.vercel.app/api/products"
+//     // "http://localhost:3000/api/products"
+//     method: "GET",
+//     mode: "cors",
+//     headers: {
+//       Accept: "application/json",
+//       "Content-Type": "application/json",
+//     },
+//   });
+//   const jsonData = await response.json();
 
-  return {
-    props: {
-      donations: jsonData.products,
-    },
-  };
-};
+//   return {
+//     props: {
+//       donations: jsonData.products,
+//     },
+//   };
+// };
 
-export default function Donations({ donations }) {
+export default function Donations({ d }) {
   const router = useRouter();
   const { id } = router.query;
+  const [donations, setDonations] = useState([]);
+
+  useEffect(async () => {
+    const response = await fetch(
+      "https://toys-project.vercel.app/api/products",
+      {
+        // "https://planetscale-test-navy.vercel.app/api/products"
+        // "http://localhost:3000/api/products"
+        method: "GET",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const jsonData = await response.json();
+    setDonations(jsonData);
+  }, []);
 
   return (
     <div className={styles.donations_container}>
