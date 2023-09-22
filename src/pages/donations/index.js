@@ -5,19 +5,16 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 export const getStaticProps = async () => {
-  const response = await fetch(
-    "https://planetscale-test-navy.vercel.app/api/products",
-    {
-      // "https://planetscale-test-navy.vercel.app/api/products"
-      // "http://localhost:3000/api/products"
-      method: "GET",
-      mode: "cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }
-  );
+  const response = await fetch("https://toys-project.vercel.app/api/products", {
+    // "https://planetscale-test-navy.vercel.app/api/products"
+    // "http://localhost:3000/api/products"
+    method: "GET",
+    mode: "cors",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  });
   const jsonData = await response.json();
 
   return {

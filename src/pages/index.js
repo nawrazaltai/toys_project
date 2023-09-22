@@ -10,7 +10,7 @@ import Signup from "./signup";
 import LoginForm from "./loginForm";
 import LoginPopup from "./loginpopup";
 
-const url = "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/users";
+const url = "https://toys-project.vercel.app/api/users";
 export default function Home() {
   const [showSignup, setShowSignup] = useState(false);
   const [showLogin, setShowLogin] = useState(false);

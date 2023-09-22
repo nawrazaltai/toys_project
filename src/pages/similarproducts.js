@@ -7,8 +7,7 @@ import { useRouter } from "next/router";
 import styles from "@/styles/SimilarDonations.module.css";
 
 const PORT = 3000;
-const url =
-  "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/products";
+const url = "https://toys-project.vercel.app/api/products";
 export default function SimilarDonations(props) {
   const router = useRouter();
   const { id } = router.query;
