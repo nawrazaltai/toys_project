@@ -6,8 +6,7 @@ import Image from "next/image";
 // import ProductCard from "./productcard";
 import { useRouter } from "next/router";
 const PORT = 3000;
-const url =
-  "https://toys-project-od36ed0cv-nawrazaltai.vercel.app/api/products";
+const url = "https://toys-project.vercel.app/api/products";
 export default function RecentProducts() {
   const router = useRouter();
   const query = router.query; /* states, user-data from loginForm */
