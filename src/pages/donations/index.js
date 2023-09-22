@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      donations: jsonData.products,
+      donations: jsonData?.products,
     },
   };
 };
