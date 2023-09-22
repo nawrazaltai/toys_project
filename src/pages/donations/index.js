@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      donations: jsonData?.products,
+      donations: jsonData.products,
     },
   };
 };
@@ -52,7 +52,7 @@ export default function Donations({ donations }) {
       </div>
 
       <div className={styles.donations_div}>
-        {donations?.map((product) => {
+        {donations.map((product) => {
           return (
             <div
               key={product.product_id}
