@@ -51,7 +51,7 @@ export default function Donation() {
           body: JSON.stringify({ id: id }),
         };
         const response = await fetch(apiUrl, postData);
-        console.log(response);
+        // console.log(response);
         const res = await response.json();
         // console.log(res);
         setProduct(res.product[0]);
