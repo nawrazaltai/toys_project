@@ -5,12 +5,11 @@ import Link from "next/link";
 // import BiErrorCircle from "react-icons/bi"; // kanske ska användas
 import styles from "../styles/login.module.css";
 
+const router = useRouter();
 const PORT = 3000;
-// const url = `http://localhost:${PORT}/api/login`;
-const url = "https://planetscale-test-navy.vercel.app/api/login";
+const url = `http://localhost:${PORT}/api/login`;
 
-export default function login() {
-  const router = useRouter();
+export default function Login() {
   const href = "/testpage";
 
   const [email, setEmail] = useState("");

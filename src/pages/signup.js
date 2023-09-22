@@ -36,7 +36,7 @@ export default function Signup(props) {
       password: password,
     };
     console.log("user: ", user);
-    fetch(`http://localhost:${PORT}/api/users`, {
+    fetch(`https://planetscale-test-navy.vercel.app/api/users`, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -59,8 +59,9 @@ export default function Signup(props) {
     const user = {
       username,
     };
-
-    fetch("http://localhost:3000/api/usersAvailable", {
+    fetch("https://planetscale-test-navy.vercel.app/api/usersAvailable", {
+      // https://planetscale-test-navy.vercel.app/api/usersAvailable
+      // http://localhost:3000/api/usersAvailable
       method: "POST",
       mode: "cors",
       headers: {
