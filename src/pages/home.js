@@ -60,7 +60,7 @@ export default function HomeTest() {
       <div className={styles.importing}>
         {products.slice(0, 6).map((product) => {
           return (
-            <div>
+            <div key={product.prdouct_id}>
               <Link
                 className={styles.product_link}
                 href={"/donations/" + product.product_id}
