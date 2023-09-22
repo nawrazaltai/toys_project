@@ -1,6 +1,7 @@
 import { Big_Shoulders_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 import { Router, useRouter } from "next/router";
+import Image from "next/image";
 import Link from "next/link";
 // import BiErrorCircle from "react-icons/bi"; // kanske ska användas
 import styles from "../styles/login.module.css";
@@ -63,7 +64,7 @@ export default function Login() {
 
       <div className={styles.loginWrapper}>
         <div className={styles.imageContainer}>
-          <img
+          <Image
             className={styles.image}
             src="/navbar_logo.png"
             width={372}
