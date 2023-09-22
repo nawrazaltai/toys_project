@@ -6,6 +6,14 @@
 // module.exports = nextConfig
 
 const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "https://toys-project.vercel.app/:path*",
+      },
+    ];
+  },
   images: {
     domains: [
       "images.unsplash.com",

@@ -45,7 +45,7 @@ export default function Donations({ d }) {
     );
     const jsonData = await response.json();
     setDonations(jsonData.products);
-    // console.log(jsonData)
+    console.log(jsonData);
   }, []);
 
   return (

@@ -7,7 +7,7 @@ const db = mysql({
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     // port: 3306, // default port == 3306
-    // ssl: { rejectUnauthorized: true }, // Kommentera bort vid uppkoppling mot localhost
+    ssl: { rejectUnauthorized: true }, // Kommentera bort vid uppkoppling mot localhost
   },
 });
 

@@ -6,23 +6,30 @@ import Image from "next/image";
 // import ProductCard from "./productcard";
 import { useRouter } from "next/router";
 const PORT = 3000;
-const url = "https://toys-project.vercel.app/api/products";
+
 export default function RecentProducts() {
+  const url = "toys-project.vercel.app/api/products";
   const router = useRouter();
   const query = router.query; /* states, user-data from loginForm */
   // console.log("QUERY :: ", query.isLoggedIn);
   const [products, setProducts] = useState([]);
 
   async function FetchProducts() {
-    const response = await fetch(url, {
-      //"https://planetscale-test-navy.vercel.app/api/products"
-      method: "GET",
-      mode: "cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://toys-project.vercel.app/api/products",
+      {
+        //"https://planetscale-test-navy.vercel.app/api/products"
+        method: "GET",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
+        },
+      }
+    );
+    console.log(response);
     const jsonData = await response.json();
     setProducts(jsonData.products);
   }
