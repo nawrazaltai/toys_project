@@ -16,15 +16,18 @@ export default function SimilarDonations(props) {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   async function FetchProducts() {
-    const response = await fetch(`http://localhost:${PORT}/api/products`, {
-      //"https://planetscale-test-navy.vercel.app/api/products"
-      method: "GET",
-      mode: "cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://planetscale-test-navy.vercel.app/api/products`,
+      {
+        //"https://planetscale-test-navy.vercel.app/api/products"
+        method: "GET",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const jsonData = await response.json();
     setAllProducts(jsonData.products);
   }

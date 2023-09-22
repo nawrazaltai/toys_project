@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 // import ProductCard from "./productcard";
 import { useRouter } from "next/router";
-const PORT = 3000;
+const PORT = 3001;
 
 export default function RecentProducts() {
   const router = useRouter();
@@ -14,15 +14,18 @@ export default function RecentProducts() {
   const [products, setProducts] = useState([]);
 
   async function FetchProducts() {
-    const response = await fetch(`http://localhost:${PORT}/api/products`, {
-      //"https://planetscale-test-navy.vercel.app/api/products"
-      method: "GET",
-      mode: "cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://planetscale-test-navy.vercel.app/api/products`,
+      {
+        //"https://planetscale-test-navy.vercel.app/api/products"
+        method: "GET",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const jsonData = await response.json();
     setProducts(jsonData.products);
   }
