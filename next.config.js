@@ -14,6 +14,7 @@ const nextConfig = {
       "res.cloudinary.com",
       "localhost",
       "planetscale-test-navy.vercel.app/",
+      "toys-project-od36ed0cv-nawrazaltai.vercel.app/",
     ],
     formats: ["image/webp"],
   },
