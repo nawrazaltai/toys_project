@@ -8,7 +8,7 @@ import Signup from "./signup";
 const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`;
 
-export default function loginForm(props) {
+export default function LoginForm(props) {
   const { onClose, switchToSignup } = props;
   const router = useRouter();
   const href = "/recentproducts";
