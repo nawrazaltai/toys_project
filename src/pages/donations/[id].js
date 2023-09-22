@@ -62,7 +62,7 @@ export default function Donation() {
 
       FetchProducts();
     }
-  }, [router.query.id, router.isReady]);
+  }, [router.query.id, router.isReady, id]);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -89,6 +89,7 @@ export default function Donation() {
             src={product.url}
             width={1000}
             height={1000}
+            alt={"text"}
           />
         </div>
       ) : (
@@ -163,9 +164,10 @@ export default function Donation() {
         <div className={styles.condition_div}>
           <h3 className={styles.condition_text}>Condition</h3>
           <ul className={styles.condition_ul}>
-            {conditionsArray.map((item) => {
+            {conditionsArray.map((item, i) => {
               return (
                 <li
+                  key={i}
                   className={
                     item.condition == condition
                       ? styles.right_condition
