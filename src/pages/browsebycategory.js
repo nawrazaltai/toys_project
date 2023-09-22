@@ -8,9 +8,9 @@ export default function BrowseByCategory() {
     <div className={styles.category_container}>
       <h2 className={styles.category_title}>Browse by category</h2>
       <section className={styles.categories_grid}>
-        {categories.map((category) => {
+        {categories.map((category, i) => {
           return (
-            <Link href={"/"} className={styles.category_card}>
+            <Link key={i} href={"/"} className={styles.category_card}>
               {category}
             </Link>
           );
