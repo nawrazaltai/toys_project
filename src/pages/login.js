@@ -5,11 +5,11 @@ import Link from "next/link";
 // import BiErrorCircle from "react-icons/bi"; // kanske ska användas
 import styles from "../styles/login.module.css";
 
-const router = useRouter();
 const PORT = 3000;
 const url = `http://localhost:${PORT}/api/login`;
 
 export default function Login() {
+  const router = useRouter();
   const href = "/testpage";
 
   const [email, setEmail] = useState("");
@@ -68,6 +68,7 @@ export default function Login() {
             src="/navbar_logo.png"
             width={372}
             height={183}
+            alt="Whatever"
           />
         </div>
 
